@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+      
+        h1{
+            background-color: blue;
+        }
+
+        fieldset{
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+            
+        }
+
+        legend{
+            text-align: center;
+        }
+
+        input{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<form action="destino.php" method="GET" autocomplete="off">
+    
+        <fieldset>
+            <legend>Formulário</legend>
+    
+            <label for="nome">Nome:</label><br>
+            <input type="text" name="nome" id="nome" placeholder="Insira seu nome"> <br> <br>
+
+            <label for="sobreome">Sobrenome:</label><br>
+
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Informe seu sobrenome"> <br> <br>
+
+            <label for="nasc">Data de nascimento</label>
+            <input type="date" name="nasc" id="nasc"> <br> <br>
+
+            <label for="address">Logradouro:</label>
+            <input type="text" name="address" id="address" placeholder="Av.Praça, Rua"> <br> <br>
+
+            <label for="numero">Numero:</label>
+            <input type="number" name="numero" id="numero" min="0" max="300.000"> <br> <br>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" placeholder="Centro..."> <br> <br>
+
+            <label for="cep">CEP:</label>
+            <input type="number" name="cep" id="cep" min="100000" max="99999999" placeholder="36290000"> <br> <br>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade"> <br> <br>
+
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado"> <br> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="usuario@gmail.com"> <br><br>
+
+            <label for="tel">Telefone:</label>
+            <input type="tel" name="tel" id="tel" placeholder="(+55) (00)0000-0000"> <br> <br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha"> <br> <br>
+
+            <input type="submit" value="Enviar" id="enviar_id">
+
+            
+
+
+
+        </fieldset>
+</form>
+    
+</body>
+</html>
