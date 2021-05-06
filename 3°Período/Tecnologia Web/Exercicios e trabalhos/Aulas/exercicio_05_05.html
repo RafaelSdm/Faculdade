@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main{
+            width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <form action="destino.php">
+        <fieldset class="main">
+            <legend>Dados Pessoais</legend>
+                <label for="nome_id">Nome: </label>
+                    <input id="name_id" name="nome" type="name" placeholder="Digite seu Nome"><br><br>
+                <label for="email_id">EMAIL: </label>
+                    <input id="email_id" name="email" type="email" placeholder="Digite seu EMAIL"><br><br>
+                <label for="cidadeid">Cidade:</label>
+                    <input type="text" name="cidade" id="cidadeid" placeholder="Informe sua cidade"> <br> <br>
+
+                    <fieldset>
+                        <label for="sexo_id">Sexo: </label>
+                        <select id="sexo_id" name="sexo">
+                            <option value="">---Selecione seu sexo---</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="PND">Prefiro não dizer</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Selecione o estado</legend>
+                    
+                    <label for="estados_id">Estado: </label>
+                    <select id="estados_id" name="estados">
+                        <option value="">--Estados--</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="DF">Distrito Federal</option>
+                    
+                    </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <h1> Áreas de Interesse </h1>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="JavaScript">
+                                <label for="JavaScript"> JavaScript </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="HTML 5">
+                                <label for="HTML 5"> HTML 5 </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="CSS 3">
+                                <label for="CSS 3"> CSS 3 </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Python">
+                                <label for="Python"> Python </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Ruby">
+                                <label for="Ruby"> Ruby </label>
+                            </li> 
+                        </ul>       
+
+                     <p>Mais informações</p>
+                    <textarea col="10" rows="10" maxlength="250"placeholder="Digite seus Conhecimentos"></textarea>
+                    </fieldset>
+
+                    <h1>Questionário</h1>
+                    <ul>
+                        <li>
+                            <label for=""> Cursa Ciência da Computação?</label>
+                            <input type="radio" name="1" value="sim">
+                            <label for="1">Sim</label>
+                            <input type="radio" name="1" value="nao">
+                            <label for="2">Não</label>
+                            <input type="radio" name="1" value="talvez">
+                            <label for="3">Talvez</label>
+                            <input type="radio" name="1" value="pnr">
+                            <label for="4">Prefiro Não Responder</label>
+                            <input type="radio" name="1" value="nEntendi">
+                            <label for="5">Não entendi</label>
+                        </li>
+                        <li>
+                            <label for=""> Mora em Barbacena?</label>
+                            
+                            <input type="radio" name="1" value="sim">
+                            <label for="1">Sim</label>
+                            <input type="radio" name="1" value="nao">
+                            <label for="2">Não</label>
+                            <input type="radio" name="1" value="talvez">
+                            <label for="3">Talvez</label>
+                            <input type="radio" name="1" value="pnr">
+                            <label for="4">Prefiro Não Responder</label>
+                            <input type="radio" name="1" value="nEntendi">
+                            <label for="5">Não entendi</label>
+                        </li>
+                        <li>
+                            <label for=""> Já visitou alguma instalação da UNIPAC?</label>
+                            
+                            <input type="radio" name="1" value="sim">
+                            <label for="1">Sim</label>
+                            <input type="radio" name="1" value="nao">
+                            <label for="2">Não</label>
+                            <input type="radio" name="1" value="talvez">
+                            <label for="3">Talvez</label>
+                            <input type="radio" name="1" value="pnr">
+                            <label for="4">Prefiro Não Responder</label>
+                            <input type="radio" name="1" value="nEntendi">
+                            <label for="5">Não entendi</label>
+                        </li>
+                        <li>
+                            <label for=""> Pretende trabalhar na Área de FrontEnd?</label>
+                            
+                            <input type="radio" name="1" value="sim">
+                            <label for="1">Sim</label>
+                            <input type="radio" name="1" value="nao">
+                            <label for="2">Não</label>
+                            <input type="radio" name="1" value="talvez">
+                            <label for="3">Talvez</label>
+                            <input type="radio" name="1" value="pnr">
+                            <label for="4">Prefiro Não Responder</label>
+                            <input type="radio" name="1" value="nEntendi">
+                            <label for="5">Não entendi</label>
+                        </li>
+                        <li>
+                            <label for=""> Pretende trabalhar na Área de BackEnd?</label>
+                            
+                            <input type="radio" name="1" value="sim">
+                            <label for="1">Sim</label>
+                            <input type="radio" name="1" value="nao">
+                            <label for="2">Não</label>
+                            <input type="radio" name="1" value="talvez">
+                            <label for="3">Talvez</label>
+                            <input type="radio" name="1" value="pnr">
+                            <label for="4">Prefiro Não Responder</label>
+                            <input type="radio" name="1" value="nEntendi">
+                            <label for="5">Não entendi</label>
+                        </li>
+                    </ul>
+                    <br> <br>
+                <input type="button" value="Enviar">
+
+                <fieldset>
+                    <h6>Ana Laura de Oliveira Ferreira</h6>
+                    <h6>Bernardo Resende Andrés</h6>
+                    <h6>Claudimar José da Cruz</h6>
+                    <h6>Pedro Henrique Paes Nascimento</h6>
+                    <h6>Rafael de Souza Damasceno</h6>
+                    </fieldset>
+                </fieldset>
+
+                    
+                
+                    
+
+                 
+        
+        </fieldset>
+    </form>
+    
+</body>
+</html>
