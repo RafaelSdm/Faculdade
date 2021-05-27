@@ -32,3 +32,18 @@ p{
 .tabela ul li{
     list-style-type:circle;
 }
+
+#bloco{
+    border: 10px solid blueviolet;
+    border-style: inset ;
+    margin-top: 30px;
+    padding: 10px 20px ;
+    min-height: 100px;
+    max-height: 500px;
+    width: 43%;
+    float: left;
+    
+}
+
+
+
