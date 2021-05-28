@@ -5,7 +5,7 @@
 
 #header{
 
-    background-color: tomato;
+    background-color: #768591;
     padding: 15px;
     text-align: center;
 
@@ -13,9 +13,10 @@
 
 #logo{
     padding: 10px;
-    color: white;
+    color: #DEA800;
     font-size: 15px;
     cursor: pointer;
+    font-weight: 900;
 }
 
 
@@ -27,11 +28,12 @@
 a{
     text-decoration: none;
     padding: 8px 12px;
-    color: turquoise;
+    color: #363b3f;
+    font-weight: 900;
 }
 
 a:hover{
-    color: violet;
+    color: #AAB0B5;
 }
 
 .rodape{
@@ -44,6 +46,17 @@ a:hover{
     text-align: center;
 
 
+}
+
+.rodape_coluna .logo1  {
+    color: #DEA800;
+    
+}
+
+
+
+.rodape_coluna .logo1:hover{
+    color: #a37b00;
 }
 
 
@@ -66,8 +79,8 @@ a:hover{
 .logo1 {
     list-style:none;
     font-size: 30px;
-    color: white;
-    cursor: default;
+    color: #DEA800;
+    cursor: pointer;
     text-decoration: none;
     padding-bottom: 29px;
 
@@ -95,7 +108,7 @@ a:hover{
 .rodape_lista-links-item::before{
     content: '>';
     margin-right: 8px;
-    color: #f44242;
+    color: #EEEC00;
 }
 
 
