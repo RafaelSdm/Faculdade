@@ -1,0 +1,96 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    width: 1024px ;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.header-topo{
+    height: 50px;
+    background-color: #162028;
+    position: relative;
+}
+
+.logotipo{
+    margin: 7px 0 0 135px;
+    color: white ;
+    
+}
+
+
+.header-nav{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    height: 100%;
+
+}
+
+
+
+.header-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 0 0 15px 0;
+    padding: 13px;
+}
+
+.header-nav a{
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.header-nav a:hover{
+    color: aliceblue;
+    border-bottom: 1px solid yellow;
+    transition: 2s;
+}
+
+.foto{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+
+
+.noticia{
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.noticia h1{
+    font-size: 36px;
+    color: #162028;
+}
+
+.noticia p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #162028;
+}
+
+
+.rodape{
+    background-color: #003d52;
+    padding: 25px;
+    font-size: 12px;
+    color: rgb(131, 138, 138);
+    text-align: center;
+    font-size: 20px;
+}
