@@ -1,0 +1,150 @@
+====================================================
+===========Trabalho Final - Tecnologia Web==========
+====================================================
+
+Divisão de Tarefas:
+====================================================
+Pedro
+-Header
+-Footer
+====================================================
+
+====================================================
+Rafael
+-Catálogo
+-Carrinho
+====================================================
+
+====================================================
+Bernardo
+-Página Inicial
+====================================================
+
+====================================================
+Claudimar
+-Login
+-Cadastro
+====================================================
+
+====================================================
+Ana
+-Historia
+-Contato
+====================================================
+
+Header{x
+    Menu Lateral
+    Menu Principal
+}
+
+Página Inicial{x
+    Ilustrações{
+        Produtos A Pronta Entrega
+        Produtos Sobre Encomenda
+    }
+    Catálogo
+    Promoções
+    Avaliações
+}
+
+Carrinho{x
+    Itens{
+        Produto
+        Quantidade
+        Preço
+    }
+    Frete{ 
+        Opções
+        Valores
+        Prazo de Postagem
+        Estimativa de Entrega
+    }
+    Fechar Pedido{
+        Confirmações
+        Forma de Pagamento
+    }
+}
+
+Contato{x
+    Formulario{
+        Assunto
+        Email
+        Conteudo
+        Cliente
+    }
+    Links{
+        Instagram
+        xxxxxxxx
+        xxxxxxxx
+        xxxxxxxx
+    }
+}
+
+Login{x
+    Usuário/email
+    Senha
+    Esqueci minha Senha
+    Link para Cadastro
+}
+
+Cadastro{x
+    Nome Completo
+    Cpf
+    Data de Nascimento
+    Endereço{
+        Rua
+        Numero/Complemento
+        Bairro
+        Cidade
+        Estado
+        CEP
+    }
+    Login
+    Senha{
+        Senha
+        Confirmar Senha
+    }
+}
+
+Produtos{x
+    Pronta Entrega{
+        Ilustrações{
+            Moldura
+            Descrição Curta
+            Valor
+        }
+        Adicionar ao Carrinho - hover{
+            Quantidade
+            Confirmar
+            Cancelar
+        }
+    }
+    Encomenda{
+        Ilustrações{
+            Moldura
+            Descrição Curta
+            Valor
+            Prazo de Produção
+        }
+        Adicionar ao Carrinho - hover{
+            Quantidade
+            Confirmar
+            Cancelar
+        }
+    }
+}
+
+Historia{x
+    ué
+}
+
+Footer{x
+    Links
+    Logo
+    Submenu
+    Formas de Pagamento
+    Copyright
+    Devs
+    Unipac
+    Topo
+}
