@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1628203421 source:c:\users\rafae\onedrive\Área de trabalho\github1\faculdade\4°período\trabalhos exercícios aulas\aulas\matriz\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
