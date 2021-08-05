@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/compra.css">
+    <title>Carrinho</title> 
+</head>
+<body>
+    <div class="container">
+        <div class="header1">
+            <div class="barra-superior">
+            </div>
+            <div class="barra-central">
+                <a href="/index.html"><img src="/imagens/logoNalauraVetor.png" alt="Início"></a>
+                <a href="/produtos.html"><h2>Produtos</h2></a>
+                <a href="/historia.html"><h2>Quem Somos</h2></a>
+                <a href="/contato.html"><h2>Contato</h2></a>
+                <a href="/login.html"><h2>Login</h2></a>
+                <a href="/carrinho.html">
+                    <div class="carrinho">
+                    <fieldset class="fieldsetCar">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4>
+                            Carrinho
+                        </h4>
+                    </fieldset>
+                    </div>
+                </a>
+            </div>
+            <div class="barra-flutuante"></div>
+    
+            <div class="linhas3">
+                <div class="linha" id="linha1"></div>
+                <div class="linha" id="linha2"></div>
+                <div class="linha" id="linha3"></div>
+                <span>Fechar</span>
+            </div>
+            <aside class="menu-lateral">
+                <ul class="menu">
+                    <li class="menu-item"><a href="/produtos.html" class="menu-link">Produtos</a></li>
+                    <li class="menu-item"><a href="/historia.html" class="menu-link">Quem Somos</a></li>
+                    <li class="menu-item"><a href="/contato.html" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="/login.html" class="menu-link">Login</a></li>
+                    <li class="menu-item"><a href="/carrinho.html" class="menu-link">Carrinho</a></li>
+                </ul>
+                <div class="sociais">
+                    <a href="https://www.instagram.com/ateliesonhosebrilhos/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5531983958189&text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/ateliesonhosebrilhos" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </aside>
+            <br>
+        </div>
+        </div>
+
+    <div class="conteudo">
+
+        <div class="small-container cart-page">
+
+            <table>
+                <tr>
+                    <th>
+                        Produtos
+                    </th>
+        
+                    <th>
+                        Quantidade
+                    </th>
+        
+                    <th>
+                        Subtotal
+                    </th>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="cart-info">
+        
+                            <img src="/imagens/fotos - 1080/PicsArt_02-22-02.36.32.jpg" alt="">
+        
+                            <div>
+        
+                                <p>Bandeja com Imagem Nossa Senhora Aparecida e Aromatizador de Ambientes.</p>
+                                <small>Preço: R$140.00</small>
+                                <br>
+                                <a href="#">Remover</a>
+        
+                            </div>
+        
+                        </div>
+                    </td>
+        
+                    <td> <input type="number" name="n" value="1" id="n">  </td>
+                    <td> R$140.00 </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="cart-info">
+        
+                            <img src="/imagens/fotos - 200/PicsArt_02-16-11.26.34.jpg" alt="">
+        
+                            <div>
+        
+                                <p>Menino Jesus</p>
+                                <small>Preço: R$45.00</small>
+                                <br>
+                                <a href="#">Remover</a>
+        
+                            </div>
+        
+                        </div>
+                    </td>
+        
+                    <td> <input type="number" name="n" value="1" id="n">  </td>
+                    <td> R$45.00 </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="cart-info">
+        
+                            <img src="/imagens/fotos - 200/PicsArt_03-09-12.45.30.jpg" alt="">
+        
+                            <div>
+        
+                                <p>Imagem Nossa Senhora das Graças pintada e decorada com strass</p>
+                                <small>Preço: R$55.00</small>
+                                <br>
+                                <a href="#">Remover</a>
+        
+                            </div>
+        
+                        </div>
+                    </td>
+        
+                    <td> <input type="number" name="n" value="1" id="n">  </td>
+                    <td> R$55.00 </td>
+                </tr>
+            </table>
+        
+            <div class="total-price">
+        
+                <table>
+                    <tr>
+                        <td>SubTotal</td>
+                        <td>R$240</td>
+        
+                    </tr>
+        
+                    <tr>
+                        <td>Taxa</td>
+                        <td>R$30.00</td>
+                    </tr>
+        
+                    <tr>
+                        <td>Total</td>
+                        <td>R$270.00</td>
+                    </tr>
+        
+                    <tr>
+                        
+                    </tr>
+                  
+        
+                    <tr>
+                        <td></td>
+
+                        <td class="td">
+                            <a class="btn" href="pagameto.html">
+                                Finalizar compra
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+        
+            </div>
+        
+        </div>
+        
+        
+        
+
+    </div>
+    
+    <div class="footer1">
+        <fieldset class="footer1">
+            <div class="pag" id="contato1">
+                <h2>Contato</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/ateliesonhosebrilhos/" target="_blank"><i class="fab fa-instagram"></i> Fale Conosco</a></li>
+                    <li><a href="/contato.html"><i class="fas fa-envelope-open-text"></i> Assine nossa Newsletter</a></li>
+                    <li><a href="https://goo.gl/maps/gujVwBu19BfyY2pq7" target="_blank"><i class="fas fa-map-marked-alt"></i> Rodovia MG 338 - Km 8 - "Portão B - Colônia Rodrigo Silva, MG, 36201-143</a></li>
+                </ul>
+            </div>
+
+
+            <div class="pag" id="pagamento">
+            <h2>Formas de Pagamento</h2>
+            <ul class="fpagamento">
+                <li class="formas"><i class="fab fa-cc-visa"></i>  <i class="fab fa-cc-amex"></i>  <i class="fab fa-cc-diners-club"></i> <i class="fab fa-cc-jcb"></i></li>
+                <li class="formas"><i class="fab fa-cc-mastercard"></i>  <i class="fab fa-apple-pay"></i>  <i class="fab fa-bitcoin"></i> <i class="fab fa-ethereum"></i></li>
+                <li class="formas"><i class="fab fa-paypal"></i>  <i class="fab fa-google-pay"></i>  <i class="fas fa-barcode"></i> <i class="fas fa-certificate"></i></li>
+            </ul>
+        </div>
+
+        
+
+        <div class="pag" id="copyright">
+            <h2><i class="far fa-copyright"></i> Copyright Sonhos e Brilhos - Todos os Direitos Reservados - UNIPAC Barbacena 2021</h2>
+            <h3>Ana Laura Oliveira - Bernardo Andrés - Claudimar Cruz</h3>
+            <h3>Pedro Paes - Rafael Damasceno</h3>
+        </div>
+    </fieldset>
+    <div class="barra-superior"></div>
+    </div>
+    <div class="setaUp">
+        <a href="#" id="topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+</body>
+<script src="js/index.js"> </script>
+</html>
