@@ -32,6 +32,7 @@ int main()
         if(k ==2){
             matriz[i] = i;
             printf("%d é primo", i );
+            k =0;
         }
         k =0;
     }
