@@ -26,7 +26,7 @@ int main()
     printf("informe o valor de n:");
     scanf("%d", &n);
 
-    printf("%d", n);
+    printf("%d \n", n);
 
     pot = potencia(k , n);
 
