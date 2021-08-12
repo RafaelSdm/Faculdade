@@ -45,7 +45,7 @@ void imprime(TipoLista lista){
     printf("\n");
 }
 
-void remove(TipoLista *lista, int pos){
+void remover(TipoLista *lista, int pos){
     int i;
 
     //verifica se a lista está vazia
@@ -61,6 +61,47 @@ void remove(TipoLista *lista, int pos){
     }
 
 }
+
+// verificar se um determinado esta na list
+// paramentro para iiso sera o id
+int busca(TipoLista lista, int id ){
+    int i;
+    for(i=lista.inicio; i<lista.fim; i++){
+        if(lista.itens[i].id == id){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+}
+
+
+//trocar dois intens da lista
+// funcao vai receber a posicao ou indice dos dois itens
+
+
+void trocarPosicao(TipoLista *lista, int positem1, int positem2 ){
+    TipoItem aux;
+    if((positem1<0) || (positem1>=lista->fim)){
+        printf("posicao do item 1 invalida");
+    }else if((positem2 <0)||(positem1>-lista->fim)){
+        printf("posicao do item 2 invalida");
+
+    }else{
+        aux = lista->itens[positem1];
+        lista->itens[positem1] = lista->itens[positem2];
+        lista->itens[positem2] = aux;
+
+    }
+
+
+
+}
+
+
+
+
 
 
 
@@ -99,9 +140,17 @@ int main(){
 
     imprime(lista);
 
-    remove(&lista, 3);
+    remover(&lista, 3);
 
     imprime(lista);
+
+
+
+    if(busca(lista, 10) == 1){
+        printf("item localizado");
+    }else{
+        printf("item nao localizado");
+    }
 
     return 0;
 }
