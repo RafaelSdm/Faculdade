@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1630625138 source:c:\users\rafae\onedrive\Área de trabalho\pilha\main.c
+	<stdio.h>
+	<stdlib.h>
+
