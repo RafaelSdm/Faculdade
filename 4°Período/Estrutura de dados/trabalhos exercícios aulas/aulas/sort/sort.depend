@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1631834380 source:c:\users\rafae\onedrive\Área de trabalho\sort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
