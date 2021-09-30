@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1632963865 source:c:\users\rafae\onedrive\Área de trabalho\projeto_aeroporto\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
