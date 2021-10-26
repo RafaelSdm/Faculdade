@@ -1,0 +1,17 @@
+l1 =uabauab
+s -> AabaAbb
+A -> aA | bA | cA |?
+
+
+l2 = UabaUab
+s -> AabaAab
+A -> aA | bA | cA | ? 
+
+L3 = 
+s -> AAS|?
+A -> a|b
+
+L4 = 
+
+s -> AAAS|?
+A -> 0|1 
