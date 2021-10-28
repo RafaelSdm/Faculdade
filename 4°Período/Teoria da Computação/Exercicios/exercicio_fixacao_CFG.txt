@@ -1,4 +1,4 @@
-l1 =uabauab
+l1 =uabaubb
 s -> AabaAbb
 A -> aA | bA | cA |?
 
