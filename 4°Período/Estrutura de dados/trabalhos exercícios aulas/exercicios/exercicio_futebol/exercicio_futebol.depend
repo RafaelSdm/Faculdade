@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1636411851 source:c:\users\rafae\onedrive\Área de trabalho\exercicio_futebol\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+
