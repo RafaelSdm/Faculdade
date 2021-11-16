@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1637017681 source:c:\users\claud\documents\unipac\1 período\code blocks2\trabalhoordenacaov2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+
+1637017682 source:c:\users\rafae\onedrive\Área de trabalho\trabalho 2 etapa\trabalhoordenacaov2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+
