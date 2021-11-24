@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1636586706 source:c:\users\aluno\downloads\projeto_arquivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1636670025 source:c:\users\aluno\downloads\projeto_arquivo_csv\projeto_arquivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<strings.h>
+

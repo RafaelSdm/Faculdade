@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1631834621 source:c:\users\nairon\google drive\documentos\ciência da computação\estruturas de dados\projetos\selectionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
