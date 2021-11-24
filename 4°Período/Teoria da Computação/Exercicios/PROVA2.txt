@@ -1,0 +1,4 @@
+
+L1 = {w € {a, b}* | w termina com a e tem no máximo 2 b’s}
+S -> AbAbAa | ?
+A -> aA | ?
