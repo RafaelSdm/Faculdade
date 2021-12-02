@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1638387205 source:c:\users\rafae\onedrive\Área de trabalho\projeto_criptografia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<time.h>
+
