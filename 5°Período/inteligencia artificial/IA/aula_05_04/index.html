@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="plotly/plotly-latest.min.js"></script>
+   
+
+    <title>Precificacao</title>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-success navbar-success" >
+
+        <ul class="navbar-nav">
+
+            <li class="navbar-item"> <a class="nav-link text-white" href="#">  Previsao de preços com regressão linear </a> </li>
+
+        </ul>
+
+    </nav>
+
+
+    <br>
+
+    <div class="container">
+
+        <img src="img/logo.png" width="100px" height="100px" align="right" alt="">
+
+
+        <h2 >Insira a idade do imovel e a area para prever o valor:</h2>
+
+        <br>
+
+
+        <div class="row">
+
+            <input type="number" id="idade" class="form-control col-md-2" min="0" max="100" placeholder="Idade" >
+            <input type="number" id="area" class="form-control col-md-2" min="5" max="200" placeholder="Area em m²" >
+
+            <button type="button" class="btn-success ml-2" onclick="prever()">Prever</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <center>
+
+        <div id="grafico" style="width: 800px; height: 350px;">
+        
+        </div>
+
+    </center>
+
+
+    <script type="text/javascript" src="js/multivariate-regression.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
