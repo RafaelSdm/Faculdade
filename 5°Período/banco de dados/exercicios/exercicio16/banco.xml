@@ -1,0 +1,100 @@
+<Hospital>
+	
+	<Ambulatorio>
+		<NumeroA>001</NumeroA>
+		<Andar>01</Andar>
+		<Capacidade>1200</Capacidade>
+	</Ambulatorio>
+
+	<Ambulatorio>
+		<NumeroA>002</NumeroA>
+		<Andar>02</Andar>
+		<Capacidade>3000</Capacidade>
+	</Ambulatorio>
+
+
+	<Medico>
+		<CRM>2001100292</CRM>
+		<rg>456.789.88.90</rg>
+		<nome>Patricio top da silva</nome>
+		<idade>123</idade>
+		<cidada>unatuba</cidada>
+		<especialidade>ginecologista</especialidade>
+		<codigoNumeroA>001</codigoNumeroA>
+
+	</Medico>
+
+
+
+	<Medico>
+		<CRM>2001100294</CRM>
+		<rg>456.789.38.90</rg>
+		<nome>andrew lo damasco</nome>
+		<idade>13</idade>
+		<cidada>cubatão</cidada>
+		<especialidade>Cirurgia Plástica</especialidade>
+		<codigoNumeroA>002</codigoNumeroA>
+
+	</Medico>
+
+
+	<Paciente>
+		<rg>123.556.77.90</rg>
+		<nome>antonio nunes</nome>
+		<idade>90</idade>
+		<cidade>jericó</cidade>
+		<doenca>gripe</doenca>
+
+	</Paciente>
+
+	<Paciente>
+		<rg>125.546.69.90</rg>
+		<nome>bredi piti</nome>
+		<idade>67</idade>
+		<cidade>los anjos</cidade>
+		<doenca>feio demais</doenca>
+		
+	</Paciente>
+
+
+	<Consulta>
+		<medicoCRM>2001100294</medicoCRM>
+		<pacienteRG>125.546.69.90</pacienteRG>
+		<data>22/12/1029</data>
+		<hora>10:00</hora>
+
+	</Consulta>
+
+
+	<Consulta>
+		
+		<medicoCRM>2001100292</medicoCRM>
+		<pacienteRG>123.556.77.90</pacienteRG>
+		<data>22/12/1029</data>
+		<hora>6:12</hora>
+		
+
+	</Consulta>
+
+
+	<Funcionario>
+		<funcionarioRG>145.544.33.00</funcionarioRG>
+		<nome>SIVLVESTRE ESTA ALONE</nome>
+		<idade>23</idade>
+		<cidade>gramados</cidade>
+		<salario>12.000</salario>
+
+	</Funcionario>
+
+		<Funcionario>
+		<funcionarioRG>145.579.33.09</funcionarioRG>
+		<nome>Alek fumaça </nome>
+		<idade>3</idade>
+		<cidade>cidade verde</cidade>
+		<salario>1000</salario>
+
+	</Funcionario>
+
+
+
+</Hospital>
