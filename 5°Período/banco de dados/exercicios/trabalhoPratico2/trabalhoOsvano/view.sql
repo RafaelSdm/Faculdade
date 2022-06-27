@@ -1,0 +1,1 @@
+CREATE VIEW listar_professor AS SELECT * FROM professor;
