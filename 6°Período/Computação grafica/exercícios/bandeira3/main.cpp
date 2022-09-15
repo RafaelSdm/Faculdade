@@ -79,6 +79,19 @@ void desenha(void)
     glEnd();
 
 
+      glColor3ub (0, 0, 0);
+
+
+      glBegin(GL_QUADS);
+               glVertex2i(670,650);
+               glVertex2i(670,350);
+               glVertex2i(800,450);
+               glVertex2i(800,550);
+
+
+    glEnd();
+
+
      glColor3ub (255, 255, 255);
 
 
@@ -149,7 +162,7 @@ void desenha(void)
     glEnd();
 
 
-/// grrrrreeeeeeciciciaa
+
 
      glColor3ub (0, 0, 255);
 
@@ -253,7 +266,7 @@ void desenha(void)
 
 
 
-// EEEUEUEEUUUUUUAAAAAAAAAAA EEEEUUUUAUAAAAAAAAAAAAA
+
 
 
 
@@ -430,7 +443,7 @@ void desenha(void)
 
     glEnd();
 
-    // afrriiccaa
+
 
       glColor3ub (255, 255, 255);
       glBegin(GL_QUADS);
@@ -624,7 +637,7 @@ void desenha(void)
 void init (void)
 {
     // Configura a cor de fundo como preta
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 }
 
 //Principal

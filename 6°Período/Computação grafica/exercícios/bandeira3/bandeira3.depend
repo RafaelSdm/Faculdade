@@ -865,3 +865,8 @@
 1526076620 c:\program files (x86)\codeblocks\mingw\i686-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
 
+1662932332 source:c:\users\rafae\onedrive\Área de trabalho\github\faculdade\6°período\computação grafica\exercícios\bandeira3\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<stdlib.h>
+
