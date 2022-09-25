@@ -1,0 +1,332 @@
+
+#define GLUT_DISABLE_ATEXIT_HACK
+
+/*
+======== Teste OpenGL ==================
+Nairon Neri Silva
+Versão 1.0
+Programa teste da configuração do GLUT
+Desenha um quadrado vermelho na tela
+========================================
+*/
+
+#include <windows.h>
+#include <GL/glut.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+float windowSizeX = 800.0f, windowSizeY = 600.0f;
+int r=255, g=0, b=0;
+
+int posX, posY, posX1, posY1;
+int contador =0;
+
+int verificaTeclado;
+int limparTela=0;
+
+int seletor=0;
+
+int fazerDesenho = 0;
+
+float tamanho = 1.0f;
+
+unsigned keyjob;
+
+float aumentarTamanho = 0.0f;
+float diminuirTamanho = 60.0f;
+
+
+
+
+void keyboard(unsigned char key, int x, int y){
+    switch(key){
+       case 27:
+            exit(0);
+            break;
+
+        case '1':
+                r=255;
+                g=0;
+                b=0;
+                printf("Cor vermelha selecionada\n");
+            break;
+
+        case '2':
+                r=0;
+                g=255;
+                b=0;
+                printf("Cor verde selecionada\n");
+            break;
+
+        case '3':
+                r=0;
+                g=0;
+                b=255;
+                printf("Cor azul selecionada\n");
+            break;
+
+        case '4':
+                r=0;
+                g=0;
+                b=0;
+                printf("Cor preta selecionada\n");
+            break;
+
+        case '5':
+                r=255;
+                g=255;
+                b=0;
+                printf("Cor amarela selecionada\n");
+            break;
+
+        case '6':
+                r=255;
+                g=203;
+                b=219;
+                printf("Cor rosa selecionada\n");
+            break;
+
+        case '7':
+                r=255;
+                g=140;
+                b=0;
+                printf("Cor laranja selecionada\n");
+            break;
+
+        case '8':
+                r=128;
+                g=128;
+                b=128;
+                printf("Cor cinza selecionada\n");
+            break;
+
+        case '9':
+                r=142;
+                g=35;
+                b=107;
+                printf("Cor marrom selecionada\n");
+            break;
+
+          case '+':
+            tamanho++;
+            printf("tamanho +: %f\n",tamanho);
+            break;
+
+        case '-':
+            printf("-------\n");
+            tamanho--;
+            if (tamanho > 0)
+            printf("tamanho -: %f\n",tamanho);
+            break;
+        case 'a':
+            limparTela=1;
+            keyjob = 'a';
+            break;
+
+    }
+    printf("R: %d / G: %d / B: %d\n", r, g, b);
+}
+
+void specialKeyboard(int key, int x, int y){
+    if (key == GLUT_KEY_LEFT){
+        printf("Tecla direcional ESQUERDA pressionada\n");
+    }
+
+    if (key == GLUT_KEY_RIGHT){
+        printf("Tecla direcional DIREITA pressionada\n");
+    }
+}
+
+void mouse(int button, int state, int x, int y){
+     y = windowSizeY - y;
+        if (button == GLUT_LEFT_BUTTON){
+                seletor++;
+            if (state == GLUT_DOWN){
+                posX = x;
+                posY = y;
+
+                if(contador >= 1){
+                    contador = 0;
+                    }else{
+                        contador++;
+                }
+
+
+                if(contador ==1){
+                        posX1 = x;
+                        posY1 = y;
+                    }else{
+                        posX = x;
+                        posY = y;
+                }
+
+
+        }
+    }
+
+}
+
+//Função callback para desenho
+void desenha(void)
+{
+    //Inicializa o sistema de coordenadas
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+
+    //Define os limites dos eixos x e y
+    //Argumentos da função: void gluOrtho2D(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top)
+    gluOrtho2D (0.0f, windowSizeX, 0.0f, windowSizeY);
+
+	//Limpa todos os pixels com a cor de fundo
+	//glClear(GL_COLOR_BUFFER_BIT);
+	if((limparTela == 1) && (seletor %2 == 0)){
+        glClear(GL_COLOR_BUFFER_BIT);
+        limparTela = 0;
+        //posX1=0;
+        //posY1=0;
+        //posX=0;
+        //posY=0;
+	}
+
+
+	//Configura a cor como vermelho
+    //glColor3ub(r, g, b);
+
+
+    // Desenha um quadrado preenchido com a cor corrente
+    //glLineWidth(60.0f);
+
+    //printf("seletorrr  %d", seletor);
+     if(seletor %2 == 0){
+
+        glColor3ub(r, g, b);
+
+        glLineWidth(tamanho);
+
+        glBegin(GL_LINES);
+        glVertex2i(posX1,posY1);
+        glVertex2i(posX,posY);
+        seletor = 1;
+
+        glEnd();
+        if(keyjob == 'a'){
+            printf("dddddddddddddd %d \n\n\n", seletor);
+            limparTela = 1;
+            //glClear(GL_COLOR_BUFFER_BIT);
+            keyjob = 'h';
+
+        }else{
+            if((limparTela == 1) && (seletor != 1)){
+                glClear(GL_COLOR_BUFFER_BIT);
+                printf("to aqui");
+                limparTela = 1;
+            }
+            // glClear(GL_COLOR_BUFFER_BIT);
+        }
+
+        //limparTela = 0;
+        //limparTela = 1;
+
+        //printf("entrei aqui porra111");
+
+
+   }else{
+        /*
+        glColor3ub(r, g, b);
+
+        glLineWidth(tamanho);
+        glBegin(GL_LINES);
+        glVertex2i(posX1,posY1);
+        glVertex2i(posX,posY);
+        seletor = 0;
+        glEnd();
+        */
+
+        //printf("entrei aqui porra");
+        if(keyjob == 'a'){
+            //limparTela = 1;
+           // glClear(GL_COLOR_BUFFER_BIT);
+        }else{
+          //  limparTela = 1;
+        }
+
+
+
+
+   }
+
+
+    /*
+    glLineWidth(tamanho);
+    glColor3ub(r, g, b);
+    printf("\n %f", tamanho);
+
+
+
+     glBegin(GL_LINES);
+
+
+
+        //printf("%f", tamanho);
+        glVertex2i(posX1,posY1);
+        glVertex2i(posX,posY);
+
+
+
+
+    glEnd();
+    */
+
+
+    glutPostRedisplay();
+
+
+
+
+	//Habilita a execução de comandos OpenGL
+	glFlush();
+}
+
+
+//Inicializa parâmetros
+void init (void)
+{
+    // Configura a cor de fundo como preta
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+}
+
+//Principal
+int main(void)
+{
+    //Tipo de janela (single-buffered) e cores utilizados
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+
+	//Configura o tamanho da janela
+	glutInitWindowSize (windowSizeX, windowSizeY);
+
+	//Configura a posição inicial da janela
+	glutInitWindowPosition (100, 100);
+
+	//Configura a janela
+	glutCreateWindow("Teste do OpenGL");
+
+	//Chama a função desenha
+	glutDisplayFunc(desenha);
+
+	//Callback de teclas normais
+	glutKeyboardFunc(keyboard);
+
+	//Callback de teclas especiais
+	glutSpecialFunc(specialKeyboard);
+
+	//Callback do Mouse
+	glutMouseFunc(mouse);
+
+
+	//Inicializa o programa
+	init();
+
+	//Habilita o loop (máquina de estados)
+	glutMainLoop();
+
+}

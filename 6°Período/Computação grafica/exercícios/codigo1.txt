@@ -1,0 +1,197 @@
+#define GLUT_DISABLE_ATEXIT_HACK
+
+/*
+======== Teste OpenGL ==================
+Nairon Neri Silva
+Versão 1.0
+Programa teste da configuração do GLUT
+Desenha um quadrado vermelho na tela
+========================================
+*/
+
+#include <windows.h>
+#include <GL/glut.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+float windowSizeX = 800.0f, windowSizeY = 600.0f;
+int r=255, g=0, b=0;
+
+int posX, posY, posX1, posY1;
+int contador =0;
+
+int verificaTeclado;
+
+float aumentarTamanho = 0.0f;
+
+
+
+void keyboard(unsigned char key, int x, int y){
+    switch(key){
+        case 27:
+            exit(0);
+            break;
+        case 'r':
+            if (r>0)
+                r--;
+            break;
+        case 'R':
+            if (r<255)
+                r++;
+            break;
+        case 'g':
+            if (g>0)
+                g--;
+            break;
+        case 'G':
+            if (g<255)
+                g++;
+            break;
+        case 'b':
+            if (b>0)
+                b--;
+            break;
+        case '+':
+            verificaTeclado = 1;
+            printf("aaaaaa");
+            break;
+    }
+    printf("R: %d / G: %d / B: %d\n", r, g, b);
+}
+
+void specialKeyboard(int key, int x, int y){
+    if (key == GLUT_KEY_LEFT){
+        printf("Tecla direcional ESQUERDA pressionada\n");
+    }
+
+    if (key == GLUT_KEY_RIGHT){
+        printf("Tecla direcional DIREITA pressionada\n");
+    }
+}
+
+void mouse(int button, int state, int x, int y){
+    y = windowSizeY - y;
+    if (button == GLUT_LEFT_BUTTON){
+        if (state == GLUT_DOWN){
+
+            posX = x;
+            posY = y;
+
+            printf("posição do x: %d, posicao do y: %d\n", posX, posY);
+            printf("posição do x1: %d, posicao do y1: %d\n", posX1, posY1);
+
+
+
+            if(contador >= 1){
+                contador = 0;
+            }else{
+                contador++;
+            }
+
+
+            if(contador ==1){
+                posX1 = x;
+                posY1 = y;
+            }else{
+                posX = x;
+                posY = y;
+            }
+
+            printf("contador %d\n", contador);
+
+
+
+    }
+}
+
+}
+
+//Função callback para desenho
+void desenha(void)
+{
+    //Inicializa o sistema de coordenadas
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+
+    //Define os limites dos eixos x e y
+    //Argumentos da função: void gluOrtho2D(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top)
+    gluOrtho2D (0.0f, windowSizeX, 0.0f, windowSizeY);
+
+	//Limpa todos os pixels com a cor de fundo
+	//glClear(GL_COLOR_BUFFER_BIT);
+
+	//Configura a cor como vermelho
+    glColor3ub(r, g, b);
+
+
+    // Desenha um quadrado preenchido com a cor corrente
+
+    if(verificaTeclado == 1){
+        aumentarTamanho = aumentarTamanho + 1.0f;
+
+        verificaTeclado = 0;
+       //printf("%f", aumentarTamanho);
+    }
+
+     glLineWidth(700.0f);
+
+     glBegin(GL_LINES);
+
+        glColor3ub(255, 255, 255);
+        glVertex2i(posX1,posY1);
+        glVertex2i(posX,posY);
+
+
+
+
+    glEnd();
+
+    glutPostRedisplay();
+
+	//Habilita a execução de comandos OpenGL
+	glFlush();
+}
+
+
+//Inicializa parâmetros
+void init (void)
+{
+    // Configura a cor de fundo como preta
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+//Principal
+int main(void)
+{
+    //Tipo de janela (single-buffered) e cores utilizados
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+
+	//Configura o tamanho da janela
+	glutInitWindowSize (windowSizeX, windowSizeY);
+
+	//Configura a posição inicial da janela
+	glutInitWindowPosition (100, 100);
+
+	//Configura a janela
+	glutCreateWindow("Teste do OpenGL");
+
+	//Chama a função desenha
+	glutDisplayFunc(desenha);
+
+	//Callback de teclas normais
+	glutKeyboardFunc(keyboard);
+
+	//Callback de teclas especiais
+	glutSpecialFunc(specialKeyboard);
+
+	//Callback do Mouse
+	glutMouseFunc(mouse);
+
+
+	//Inicializa o programa
+	init();
+
+	//Habilita o loop (máquina de estados)
+	glutMainLoop();
+
+}
