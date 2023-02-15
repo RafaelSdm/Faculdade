@@ -1,14 +1,17 @@
 package aluno;
 
 import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Principal {
 	public static void main(String[] args) throws ParseException {
 		SimpleDateFormat formato = new SimpleDateFormat("DD/MM/YYYY");
-		Date aluno_1 = formato.parse("08/08/2001");
+		LocalDate aluno_1 = LocalDate.of(2001, 8, 8);
 		Aluno aluno1 = new Aluno("Rafael", "123456789", aluno_1, "rafaeldamasceno2000@gmail.com" );
 		
 		
@@ -20,7 +23,7 @@ public class Principal {
 		System.out.println("Email:" +aluno1.getEmail());
 		
 		
-		Date aluno_2 = formato.parse("08/08/2001");
+		LocalDate aluno_2 = LocalDate.of(2020, 1, 15);
 		Aluno aluno2 = new Aluno("Joao", "124569878", aluno_2, "joaokleber@gmail.com" );
 		
 		System.out.println("----------------------------------------------------------");
@@ -30,22 +33,60 @@ public class Principal {
 		System.out.println("Email:" +aluno2.getEmail());
 		
 		
-		Date aluno_3 = formato.parse("08/08/2001");
+		LocalDate aluno_3 = LocalDate.of(2019, 1, 15);
 		Aluno aluno3 = new Aluno("Ricardo", "789456123", aluno_3, "ricardo2023@gmail.com" );
 		System.out.println("-------------------------------------------------------");
 		System.out.println("Nome:"+ aluno3.getNome());
 		System.out.println("CPF:" + aluno3.getCpf());
 		System.out.println("Data:" +aluno3.getDataNasci());
 		System.out.println("Email:" +aluno3.getEmail());
+
+		
+		boolean resultado = aluno3.getDataNasci().isBefore(aluno2.getDataNasci());
+		Integer primeiroComp = 0;
+		
+		if(resultado == true) {
+			System.out.println("O aluno 3 é maior que o aluno 2");
+			primeiroComp = 1;
 		
 		
+		}else {
+			System.out.println("O aluno 2 é maior que o aluno 3");
+			primeiroComp = 2;
+		}
+		
+		System.out.println(resultado);
+		System.out.println(primeiroComp);
+		
+		System.out.println("---------------------------------------------");
 		
 		
+		if(primeiroComp == 1) {
+			resultado = aluno3.getDataNasci().isBefore(aluno1.getDataNasci());
+			
+			if(resultado == true) {
+				System.out.println("O aluno 3 é mais velho que o aluno 1");
+			}else {
+				System.out.println("O aluno 1 é mais velho que o aluno 3");
+				LocalDate dataAtual = LocalDate.now();
+				int idade = Period.between(aluno1.getDataNasci(), dataAtual).getYears();
+				System.out.println(idade);
+			}
+		}else {
+			
+			resultado = aluno2.getDataNasci().isBefore(aluno1.getDataNasci());
+			
+			if(resultado == true) {
+				System.out.println("o aluno 2 é mais velho que o aluno 1");
+			}else {
+				System.out.println("o aluno 1 é mais velho que o aluno 2");
+			}
+			
+			
+			
+		}
 		
-		
-		
-		
-		
+				
 	
 		
 	}

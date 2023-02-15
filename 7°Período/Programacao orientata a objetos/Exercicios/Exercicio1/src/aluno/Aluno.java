@@ -1,16 +1,17 @@
 package aluno;
 
 import java.util.Date;
+import java.time.LocalDate;
 
 public class Aluno {
 	
 	private String nome;
 	private String cpf;
-	private Date dataNasci;
+	private LocalDate dataNasci;
 	private String email;
 	
 	
-	public Aluno(String nome, String cpf, Date dataNasci, String email) {
+	public Aluno(String nome, String cpf, LocalDate dataNasci, String email) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNasci = dataNasci;
@@ -34,11 +35,11 @@ public class Aluno {
 		this.cpf = cpf;
 	}
 	
-	public Date getDataNasci() {
+	public LocalDate getDataNasci() {
 		return dataNasci;
 	}
 	
-	public void setDataNasci(Date dataNasci) {
+	public void setDataNasci(LocalDate dataNasci) {
 		this.dataNasci = dataNasci;
 	}
 	
