@@ -51,9 +51,6 @@ public class Aluno {
 		this.email = email;
 	}
 	
-	public Integer idadeAluno(Aluno aluno) {
-		Integer idade = 0;
-		return idade;
-	}
+
 
 }
