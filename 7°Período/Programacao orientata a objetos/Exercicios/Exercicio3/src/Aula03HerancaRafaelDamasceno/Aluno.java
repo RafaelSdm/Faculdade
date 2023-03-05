@@ -1,6 +1,6 @@
 package Aula03HerancaRafaelDamasceno;
 
-import java.util.Date;
+//import java.util.Date;
 
 public class Aluno extends Pessoa{
 	
@@ -14,7 +14,7 @@ public class Aluno extends Pessoa{
 	public String getMatricula() {
 		return Matricula;
 	}
-
+//
 	public void setMatricula(String matricula) {
 		Matricula = matricula;
 	}

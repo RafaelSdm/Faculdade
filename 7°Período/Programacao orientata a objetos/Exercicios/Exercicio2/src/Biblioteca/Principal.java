@@ -104,6 +104,20 @@ public class Principal {
 			
 		}
 		
+		int p = 0;
+		int x = 0;
+		int z = 0;
+		for(p = 0; p<=10;p++) {
+			System.out.println(p);
+			for(x=50;x<=60;x++) {
+				System.out.println(x);
+				for(z=90;z<=100;z++) {
+					System.out.println(z);
+				}
+				
+			}
+		}
+		
 		
 		
 		
