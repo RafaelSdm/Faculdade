@@ -154,20 +154,26 @@ public class Principal {
 		*/
 		
 		for(Animal animalFor : listaAnimal) {
-			System.out.println("");
+			System.out.println("animal: "+ animalFor.getNome());
 			for(PertenceAnimal pertenceAn: listaPertenceAnimal) {				
 				for(Proprietario prop : listaProprietario) {
 					if((prop.getCodCli() == pertenceAn.getCodcli() && animalFor.getCodAnimal() == pertenceAn.getCodAnimal()) ) {
-						System.out.println("------------------------------------------------------------------------");
+						//System.out.println("------------------------------------------------------------------------");
 						System.out.println("o dono do animal " + animalFor.getNome() + "do id animal " + animalFor.getCodAnimal() + "é o " + prop.getNome() + "com o id " + prop.getCodCli() + " e com o nome: " + prop.getNome());
 					}else {
-						//System.out.println("teste de erro id prop " + prop.getCodCli() + " id pertence " + pertence.getCodcli());
+						System.out.println("teste de erro id prop " + prop.getCodCli() + " id pertence " + pertence.getCodcli());
 					}
 				}
 					
 				
 			}
 			
+		}
+		
+		System.out.println("nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+		
+		for(Proprietario perAn : listaProprietario) {
+			System.out.println(perAn.getNome());
 		}
 		
 
