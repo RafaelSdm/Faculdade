@@ -2,6 +2,8 @@ package Aula05RafaelDamasceno;
 
 
 import java.util.Date;
+//Aqui foi implementado o método herança
+
 import java.util.List;
 public class Fornecedor extends Pessoa {
 	

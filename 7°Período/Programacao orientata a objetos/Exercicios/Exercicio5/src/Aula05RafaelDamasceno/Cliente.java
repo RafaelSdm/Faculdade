@@ -2,6 +2,7 @@ package Aula05RafaelDamasceno;
 
 import java.util.Date;
 import java.util.List;
+//Aqui foi implementado o método herança
 
 public class Cliente extends Pessoa {
 	
@@ -31,6 +32,7 @@ public class Cliente extends Pessoa {
 		this.cpf = cpf;
 	}
 	
+
 	
 	
 	
