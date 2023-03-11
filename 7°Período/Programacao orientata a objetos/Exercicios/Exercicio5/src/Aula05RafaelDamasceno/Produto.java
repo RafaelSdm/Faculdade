@@ -12,7 +12,7 @@ public class Produto {
 		this.id = id;
 		this.nome = nome;
 		this.preco_unitario = preco_unitario;
-		this.forn = forn;
+		this.forn = forn; 
 	}
 	
 	public int getId() {

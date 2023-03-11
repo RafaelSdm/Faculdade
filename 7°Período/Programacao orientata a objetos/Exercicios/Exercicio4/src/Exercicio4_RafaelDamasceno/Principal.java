@@ -4,6 +4,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Principal {
+	
+	public static void main2(ArrayList<Animal> listaAnimal) {
+		
+		Collections.sort(listaAnimal,(Animal a1, Animal a2) -> a1.getNome().compareTo(a2.getNome()));
+		
+		for(Animal a: listaAnimal) {
+			System.out.println(a.getNome());
+		}
+		
+		
+		
+		
+	}
 	public static void main(String[] args) {
 		
 		ArrayList<Proprietario> listaProprietario = new ArrayList<Proprietario>();
@@ -162,8 +175,6 @@ public class Principal {
 			//System.out.println("dono do bicho:");
 			System.out.println();
 			System.out.println();
-			
-
 			for(PertenceAnimal pertenceAn: listaPertenceAnimal) {
 				if(animalFor.getCodAnimal() == pertenceAn.getCodAnimal()) {
 					for(Proprietario prop : listaProprietario) {
@@ -203,9 +214,7 @@ public class Principal {
 			System.out.println("Proprietário: "+ prop1.getNome());
 			//System.out.println("dono do bicho:");
 			System.out.println();
-			System.out.println();
-			
-
+			//System.out.println();
 			for(PertenceAnimal pertenceAn: listaPertenceAnimal) {
 				if(prop1.getCodCli() == pertenceAn.getCodcli()) {
 					for(Animal animalAn : listaAnimal) {
@@ -236,6 +245,9 @@ public class Principal {
 			
 			
 		}
+		
+		
+		main2(listaAnimal);
 		
 		
 
