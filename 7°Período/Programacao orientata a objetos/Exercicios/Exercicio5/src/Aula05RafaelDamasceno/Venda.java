@@ -93,7 +93,7 @@ public class Venda {
 				//System.out.println("teste de for");
 				System.out.println("Nome do cliente:" +cli.getNome());
 				System.out.println("Valor total da comrpra: " + valorTotal);
-				System.out.println("Valor Final da compra:" + valorTotal * 8);
+				System.out.println("Valor Final da compra:" + valorTotal * 0.9);
 				verificaPessoa = 1;
 				//return valorTotal * 10;
 				
@@ -106,7 +106,7 @@ public class Venda {
 				//System.out.println("teste de for");
 				System.out.println("Nome do Funcionario: " + fun.getNome());
 				System.out.println("Valor total da comrpra: " + valorTotal);
-				System.out.println("Valor Final da compra:" + valorTotal * 4);
+				System.out.println("Valor Final da compra:" + valorTotal * 0.8);
 				verificaPessoa = 1;
 
 				//return valorTotal * 40;
@@ -121,7 +121,7 @@ public class Venda {
 				System.out.println("teste de for");
 				System.out.println("Nome do Fornecedor: " + forn.getNome());
 				System.out.println("Valor total da comrpra: " + valorTotal);
-				System.out.println("Valor Final da compra:" + valorTotal * 170);
+				System.out.println("Valor Final da compra:" + valorTotal * 0.8);
 				verificaPessoa = 1;
 
 
@@ -133,7 +133,7 @@ public class Venda {
 		
 		if(verificaPessoa == 0) {
 			System.out.println("Conta do novo cliente: " + valorTotal);
-			System.out.println("Valor final da compra" + valorTotal * 10000);
+			System.out.println("Valor final da compra" + valorTotal * 0.95);
 			
 		}
 		

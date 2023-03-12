@@ -192,6 +192,14 @@ public class Principal {
 		
 		
 		
+		
+		valorTotal = main2(produtos, new int[] {4,2,8,6});
+		venda = new Venda(clientes, produtos, fornecedores, funcionarios, valorTotal, valorTotal);
+		vendas.add(venda);
+		venda.getValorFinalComDesconto(venda.getFornecedor().get(1).getCnpj());
+		
+		
+		
 		valorTotal = main2(produtos, new int[] {4,4,4,8,6});
 		venda = new Venda(clientes, produtos, fornecedores, funcionarios, valorTotal, valorTotal);
 		vendas.add(venda);
