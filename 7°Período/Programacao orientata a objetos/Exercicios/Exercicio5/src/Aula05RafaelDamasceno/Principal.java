@@ -196,7 +196,7 @@ public class Principal {
 		valorTotal = main2(produtos, new int[] {4,2,8,6});
 		venda = new Venda(clientes, produtos, fornecedores, funcionarios, valorTotal, valorTotal);
 		vendas.add(venda);
-		venda.getValorFinalComDesconto(venda.getFornecedor().get(1).getCnpj());
+		venda.getValorFinalComDesconto(venda.getFuncionario().get(1).getCpf());
 		
 		
 		
