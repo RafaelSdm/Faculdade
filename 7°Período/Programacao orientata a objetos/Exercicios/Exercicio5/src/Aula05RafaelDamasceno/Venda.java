@@ -85,12 +85,17 @@ public class Venda {
 	}
 	
 	
-	public double getValorFinalComDesconto(String cpf) {
+	public void getValorFinalComDesconto(String cpf) {
 		Double teste = 0.0;
+		int verificaPessoa = 0;
 		for(Cliente cli: cliente) {
 			if(cli.getCpf() == cpf) {
-				System.out.println("teste de for");
-				return valorTotal * 10;
+				//System.out.println("teste de for");
+				System.out.println("Nome do cliente:" +cli.getNome());
+				System.out.println("Valor total da comrpra: " + valorTotal);
+				System.out.println("Valor Final da compra:" + valorTotal * 8);
+				verificaPessoa = 1;
+				//return valorTotal * 10;
 				
 			}
 		}
@@ -98,8 +103,13 @@ public class Venda {
 		
 		for(Funcionario fun: funcionario) {
 			if(fun.getCpf() == cpf) {
-				System.out.println("teste de for");
-				return valorTotal * 40;
+				//System.out.println("teste de for");
+				System.out.println("Nome do Funcionario: " + fun.getNome());
+				System.out.println("Valor total da comrpra: " + valorTotal);
+				System.out.println("Valor Final da compra:" + valorTotal * 4);
+				verificaPessoa = 1;
+
+				//return valorTotal * 40;
 
 			}
 		}
@@ -109,15 +119,31 @@ public class Venda {
 		for(Fornecedor forn: fornecedor) {
 			if(forn.getCnpj() == cpf) {
 				System.out.println("teste de for");
-				return valorTotal * 1000;
+				System.out.println("Nome do Fornecedor: " + forn.getNome());
+				System.out.println("Valor total da comrpra: " + valorTotal);
+				System.out.println("Valor Final da compra:" + valorTotal * 170);
+				verificaPessoa = 1;
+
+
+				//return valorTotal * 1000;
 
 			}
 		}
 		
 		
+		if(verificaPessoa == 0) {
+			System.out.println("Conta do novo cliente: " + valorTotal);
+			System.out.println("Valor final da compra" + valorTotal * 10000);
+			
+		}
 		
 		
-		return teste;
+		System.out.println("-------------------------------------------------------------");
+		
+		
+		
+		
+		//return teste;
 		
 	}
 	
