@@ -15,6 +15,9 @@ public class Cliente extends Pessoa {
 		this.data_nascimento = data_nascimento;
 		this.cpf = cpf;
 	}
+	
+	
+	// Encapsulamento nos getters e setter
 
 	public Date getData_nascimento() {
 		return data_nascimento;

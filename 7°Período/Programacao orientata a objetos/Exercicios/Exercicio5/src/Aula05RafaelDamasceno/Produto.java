@@ -15,6 +15,10 @@ public class Produto {
 		this.forn = forn; 
 	}
 	
+	
+	// Encapsulamento nos getters e setter
+
+	
 	public int getId() {
 		return id;
 	}

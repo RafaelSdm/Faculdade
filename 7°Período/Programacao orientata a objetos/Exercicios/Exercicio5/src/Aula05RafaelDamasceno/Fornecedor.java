@@ -17,6 +17,9 @@ public class Fornecedor extends Pessoa {
 		this.data_abertura = data_abertura;
 		this.cnpj = cnpj;
 	}
+	
+	// Encapsulamento nos getters e setter
+
 	public Date getData_abertura() {
 		return data_abertura;
 	}

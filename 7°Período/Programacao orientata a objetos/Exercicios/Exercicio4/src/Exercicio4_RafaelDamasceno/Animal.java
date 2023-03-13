@@ -59,7 +59,7 @@ public class Animal implements Comparable<Animal>{
 	}
 	
 	
-	
+	@Override
 	public int compareTo(Animal outroAnimal) {
 		return Integer.compare(this.idade, outroAnimal.idade);
 	}

@@ -21,6 +21,10 @@ public class Funcionario extends Pessoa {
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
 	}
+	
+	
+	// Encapsulamento nos getters e setter
+
 
 
 	public Date getData_admissao() {

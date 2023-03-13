@@ -23,6 +23,10 @@ public class Venda {
 		this.valorTotal = valorTotal;
 		this.valorFinal = valorFinal;
 	}
+	
+	
+	// Encapsulamento nos getters e setter
+
 
 
 	public ArrayList<Cliente> getCliente() {
