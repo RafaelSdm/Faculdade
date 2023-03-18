@@ -59,6 +59,14 @@ public class Pedido {
 		this.taxaServico = taxaServico;
 	}
 	
+	public void teste(List<String> itensVendidos) {
+		//int i = 0;
+		for(int i = 0; i < itensVendidos.size(); i++ ) {
+			//itensVendidos.get(i);
+			System.out.println(itensVendidos.get(i));
+		}
+	}
+	
 	
 	
 
