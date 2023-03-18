@@ -25,11 +25,11 @@ public class Principal {
 		listaPizza.add(pizza);
 		
 		
-		Salgadinho salgado =  new Salgadinho("Empada de bacon com calabresa", 10.0, "22/03/2023", 250.0, "Massa integral", "calabresa e bacon");
+		Salgadinho salgado =  new Salgadinho("Empada de bacon com calabresa", 10.0, "22/03/2023", 250.0, "Massa integral", "calabresa e bacon", "assado");
 		
 		listaSalgadinho.add(salgado);
 		
-		salgado =  new Salgadinho("Coxinha de frango com catupiry", 12.0, "22/03/2023", 450.0, "Massa de farinha de rosca", "frango com catupiry");
+		salgado =  new Salgadinho("Coxinha de frango com catupiry", 12.0, "22/03/2023", 450.0, "Massa de farinha de rosca", "frango com catupiry", "frito");
 		//String nomePrato, Double preco, String dataValidade, Double peso, String tipoMassa,
 		//String recheio
 		
