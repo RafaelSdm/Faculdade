@@ -197,7 +197,7 @@ public class Principal {
 		//String nomePizza, String borda, String molho, Double preco
 		if(opcaoPizza == 1) {
 			nomePizzaP =  "Pizza portuguesa com borda de queijo";
-			precoPizzaP = 5.0;
+			precoPizzaP = 50.0;
 			molhoPizzaP = null;
 			bordaPizzaP = "queijo";
 			pi = pizzaPersonalizada(nomePizzaP, bordaPizzaP, molhoPizzaP, precoPizzaP);
@@ -212,7 +212,7 @@ public class Principal {
 		
 		
 		
-		Pedido pedido = new Pedido("Rafael", testelista, calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche ), 290.0, 70.0, 10.0);
+		Pedido pedido = new Pedido("Rafael", testelista, calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche ), 500.0, null, 0.1);
 		
 		pedido.teste(testelista);
 

@@ -68,7 +68,10 @@ public class Pedido {
 	
 	public void teste(List<String> itensVendidos) {
 		//int i = 0;
-		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println("Nota fiscal do Pedido:");
 		System.out.println("Numero do cupom fiscal: "+ gerador.nextInt(1000));
 		//            System.out.println(gerador.nextInt(26));
@@ -89,10 +92,16 @@ public class Pedido {
 		
 		
 		System.out.println("Valor total do pedido: R$ " + valorTotal);
-		System.out.println("Valor final com a taxa de servico:" + valorTotal * taxaServico);
+		//System.out.println("Valor final com a taxa de servico:" + valorTotal * taxaServico);
+		taxaServico = valorTotal + (valorTotal * taxaServico);
+		System.out.println("Valor final do servico: R$ " + taxaServico);
+		this.troco = taxaServico;
+		System.out.println("Valor do troco R$: " + (valorRecebido - taxaServico) );
 		
-		
-		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		
 		
 	}
