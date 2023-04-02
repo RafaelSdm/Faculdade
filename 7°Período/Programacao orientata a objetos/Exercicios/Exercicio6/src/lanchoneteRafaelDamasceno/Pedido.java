@@ -66,7 +66,7 @@ public class Pedido {
 		this.taxaServico = taxaServico;
 	}
 	
-	public void teste(List<String> itensVendidos) {
+	public void gerarNotaFiscal(List<String> itensVendidos) {
 		//int i = 0;
 		System.out.println();
 		System.out.println();

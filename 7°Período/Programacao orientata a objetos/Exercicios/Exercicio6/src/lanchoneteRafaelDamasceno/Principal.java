@@ -214,12 +214,12 @@ public class Principal {
 		
 		Pedido pedido = new Pedido("Rafael", testelista, calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche ), 500.0, null, 0.1);
 		
-		pedido.teste(testelista);
+		pedido.gerarNotaFiscal(testelista);
 
 		//Double resultado = calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche );
 
 
-
+		
 		
 		opcaoPizza = verificaPizzaPersonalizada();
 
@@ -244,7 +244,7 @@ public class Principal {
 
 		
 		
-		pedido.teste(testelista);
+		pedido.gerarNotaFiscal(testelista);
 		
 		
 		
