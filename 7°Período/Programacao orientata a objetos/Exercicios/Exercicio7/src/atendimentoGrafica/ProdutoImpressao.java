@@ -59,7 +59,7 @@ public class ProdutoImpressao {
 	public void mostrarItens(ArrayList<ProdutoImpressao> lista) {
 		
 		for(ProdutoImpressao ln: lista ) {
-			System.out.println(ln.tipo);
+			System.out.println("[ " + ln.idPedido + "]" + "------ Produto: " + ln.tipo + " Preco: R$: " + ln.getPreco());
 			
 		}
 		

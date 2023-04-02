@@ -1,5 +1,9 @@
 package atendimentoGrafica;
 
+
+import java.util.ArrayList;
+
+
 public class Empregado extends Usuario {
 
 	private String tipoEquipamento;
@@ -41,6 +45,18 @@ public class Empregado extends Usuario {
 	}
 	
 	
+	public void mostrarFuncionario(ArrayList<Empregado> funcionario) {
+		
+		System.out.println("Lista de Funcionarios");
+		
+		for(Empregado emp: funcionario) {
+			
+			System.out.println("[" + emp.getId() + "] ------  " + emp.getNome() );
+			
+		}
+
+		
+	}
 
 
 
