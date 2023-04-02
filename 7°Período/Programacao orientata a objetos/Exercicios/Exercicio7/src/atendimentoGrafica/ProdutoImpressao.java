@@ -65,6 +65,25 @@ public class ProdutoImpressao {
 		
 		
 	}
+	
+	
+	public Double calcularPedido(ArrayList<ProdutoImpressao> lista, ArrayList<Integer> listaCompra) {
+		Double valorPedido = 0.0;
+		
+		for(ProdutoImpressao pd: lista) {
+			for(Integer pn: listaCompra) {
+				if(pn == pd.idPedido) {
+					valorPedido = valorPedido + pd.getPreco();
+				}
+				}
+		}
+		
+		
+		
+		return valorPedido;
+		
+		
+	}
 
 	
 	
