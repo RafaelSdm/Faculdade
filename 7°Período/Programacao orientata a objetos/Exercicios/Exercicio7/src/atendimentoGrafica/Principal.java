@@ -24,6 +24,8 @@ public class Principal {
 		
 		int j = 1;
 		
+		Double valorFinal = 0.0;
+		
 		Scanner entrada = new Scanner(System.in);
 		
 		String nomeCliente;
@@ -144,6 +146,10 @@ public class Principal {
 						
 					}else {
 						
+						
+						valorFinal = produtoImpressao.calcularPedido(listaProdutoImpressao, listaPedido);
+						
+						System.out.println("o valor da compra foi de " + valorFinal);
 						System.out.println(listaPedido);
 						j = 0;
 
