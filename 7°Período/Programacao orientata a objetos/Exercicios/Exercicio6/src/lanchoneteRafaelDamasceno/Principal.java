@@ -56,7 +56,7 @@ public class Principal {
 			for(Pizza pz : listaPizza) {
 				//System.out.println(pz.getNomePrato());
 				if(itens.get(i) == pz.getNomePrato()) {
-					System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + pz.getNomePrato());
+					//System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + pz.getNomePrato());
 					valorTotal = valorTotal + pz.getPreco();
 				}
 			}
@@ -64,7 +64,7 @@ public class Principal {
 			for(Salgadinho sg: listaSalgadinho) {
 				//System.out.println(sg.getNomePrato());
 				if(itens.get(i) == sg.getNomePrato()) {
-					System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + sg.getNomePrato());
+					//System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + sg.getNomePrato());
 					valorTotal = valorTotal + sg.getPreco();
 
 				}
@@ -73,7 +73,7 @@ public class Principal {
 			for(Lanche lc: listaLanhce) {
 				//System.out.println(lc.getNomePrato());
 				if(itens.get(i) == lc.getNomePrato()) {
-					System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + lc.getNomePrato());
+					//System.out.println("os pratos possuem o mesmo nome - nome da lista do cliente: " + itens.get(i) + " nome que está na lista de pedidos " + lc.getNomePrato());
 					valorTotal = valorTotal + lc.getPreco();
 
 				}
@@ -144,6 +144,9 @@ public class Principal {
 		
 		listaLanche.add(lanche);
 		
+		//			testelista = List.of("Hamburguer assado", "Sanduíche completo", "Pizza Portuguesa", "Empada de bacon com calabresa");
+
+		
 		
 		System.out.println("*************************CARDÁDIO DA NOSSA LANCHONETE*****************************");
 		
@@ -187,25 +190,14 @@ public class Principal {
 		}
 		
 		
-		//new String[] {"a", "b"};
-		//List<String> testelista = List.of("Hamburguer assado", "Sanduíche completo", "Pizza Portuguesa", "Empada de bacon com calabresa");
-		
-		/*
-		System.out.println("Deseja adicionar uma pizza personalizada?");
-		System.out.println("[1] - SIM");
-		System.out.println("[2] - NÃO");
-		opcaoPizza = entrada.nextInt();
-		entrada.nextLine();
-		
-		*/
-		
+
 		List<String> testelista;
 		
 		opcaoPizza = verificaPizzaPersonalizada();
 		//String nomePizza, String borda, String molho, Double preco
 		if(opcaoPizza == 1) {
 			nomePizzaP =  "Pizza portuguesa com borda de queijo";
-			precoPizzaP = 230.0;
+			precoPizzaP = 5.0;
 			molhoPizzaP = null;
 			bordaPizzaP = "queijo";
 			pi = pizzaPersonalizada(nomePizzaP, bordaPizzaP, molhoPizzaP, precoPizzaP);
@@ -218,100 +210,22 @@ public class Principal {
 
 		}
 		
-		//List<String> testelista = List.of("Hamburguer assado", "Sanduíche completo", "Pizza Portuguesa", "Empada de bacon com calabresa");
+		
+		
+		Pedido pedido = new Pedido("Rafael", testelista, calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche ), 290.0, 70.0, 10.0);
+		
+		pedido.teste(testelista);
 
-		
-		
-		
-	
-		//System.out.println(testelista);
-		
-		//		Pizza pizza = new Pizza("Pizza Portuguesa", 40.0, "23/10/2023", 1.0, "Ervilhas, milho, queijo, presunto, calabresa, oregano", "borda comum", "tomate" );
+		//Double resultado = calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche );
 
-		/*
-		
-		if(opcaoPizza == 1) {
-			System.out.println("Voce quer uma pizza personalizada");
-			
-			System.out.println("Lista das pizzas personalizadas:");
-			System.out.println("Qual pizza voce quer personalizar?");
-			System.out.println("[1] Pizza portuguesa");
-			System.out.println("[2] Pizza com cheedar");
-			opcaoPizza = entrada.nextInt();
-			entrada.nextLine();
-			
-			if(opcaoPizza == 1) {
-				System.out.println("Voce escolheu a pizza portuguesa");
-			}else {
-				System.out.println("Voce escolheu a pizza com cheedar");
-			}
-			
-			
-			if(opcaoPizza == 1) {
-				System.out.println("Voce quer borda?");
-				System.out.println("[1] - SIM");
-				System.out.println("[2] - NÃO");
-				opcaoPizza = entrada.nextInt();
-				entrada.nextLine();
-				
-				if(opcaoPizza == 1) {
-					System.out.println("Escolha a borda:");
-					System.out.println("[1] - CHEEDAR");
-					System.out.println("[2] - CATUPIRY");
-					
-					opcaoPizza = entrada.nextInt();
-					entrada.nextLine();
-					
-					
-				}
-				
-				if(opcaoPizza == 1) {
-					System.out.println("Voce escolheu cheedar");
-				}else {
-					System.out.println("voce escolheu catpiry");
-				}
-				
-				
-			}
-			*/
-			
-			
-			
-		/*	
-			
-		}else {
-			System.out.println("voce não quer uma pizza personalizada");
-		}
-		
-		*/
-		
-		Pedido pedido = new Pedido("Rafael", testelista, 220.0, 290.0, 70.0, 10.0);
-		
-		//System.out.println("kdmkmmkfmkkkkkkkkkkkk");
-		
-		//pedido.teste(testelista);
-		System.out.println("fodase main 2");
-		Double resultado = calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche );
-		//System.out.println(pedido.getNomeCliente());
-		//String nomeCliente, List<String> itensVendidos, Double valorTotal, Double valorRecebido,
-				//Double troco, Double taxaServico
-		System.out.println("o valor total do pedido do cliente foi de: " + resultado);
-		//String nomePrato, Double preco, String dataValidade, Double peso, String tipoPao, String recheio,
-		//String molho
-		
-		
-		System.out.println("teste finalizado do primeiro cliente");
-		
-		System.out.println("------------------------------------");
-		
-		System.out.println("teste iniciando do segundo cliente");
-		//new String[] {"a", "b"};
+
+
 		
 		opcaoPizza = verificaPizzaPersonalizada();
-		//String nomePizza, String borda, String molho, Double preco
+
 		if(opcaoPizza == 1) {
 			nomePizzaP =  "Pizza com catupiry com recheio de catupiry e molho pardo";
-			precoPizzaP = 530.0;
+			precoPizzaP = 50.0;
 			molhoPizzaP = "molho pardo";
 			bordaPizzaP = "queijo";
 			pi = pizzaPersonalizada(nomePizzaP, bordaPizzaP, molhoPizzaP, precoPizzaP);
@@ -323,29 +237,14 @@ public class Principal {
 			testelista = List.of("Hamburguer assado", "Sanduíche completo", "Pizza Portuguesa", "Empada de bacon com calabresa");
 
 		}
-		 //testelista = List.of("Hamburguer assado", "Sanduíche completo", "Empada de bacon com calabresa", "pizza personalizada");
-		// fazer uma funcao que verifica se na lista possui personalizada; retornar o nome da pizza personalizada;
-		 
+
+		
+		pedido = new Pedido("Joao", testelista, calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche ), 290.0, null, 0.1);
+				
+
 		
 		
-		pedido = new Pedido("Rafael", testelista, 220.0, 290.0, 70.0, 10.0);
-		
-		System.out.println("kdmkmmkfmkkkkkkkkkkkk");
-		
-		//pedido.teste(testelista);
-		System.out.println("fodase main 2");
-		resultado = calculoPedido(testelista, listaPizza, listaSalgadinho, listaLanche );
-		//System.out.println(pedido.getNomeCliente());
-		//String nomeCliente, List<String> itensVendidos, Double valorTotal, Double valorRecebido,
-				//Double troco, Double taxaServico
-		System.out.println("o valor total do pedido do cliente foi de: " + resultado);
-		//String nomePrato, Double preco, String dataValidade, Double peso, String tipoPao, String recheio,
-		//String molho
-		
-		
-		//Pizza pizzaPersonalizada = new Pizza("Pizza Portuguesa", 40.0, "23/10/2023", 1.0, "Ervilhas, milho, queijo, presunto, calabresa, oregano", "cheedar", "tomate");
-		
-		
+		pedido.teste(testelista);
 		
 		
 		

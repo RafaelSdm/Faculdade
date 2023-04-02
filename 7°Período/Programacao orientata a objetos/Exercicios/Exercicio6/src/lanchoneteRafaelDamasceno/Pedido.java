@@ -1,6 +1,8 @@
 package lanchoneteRafaelDamasceno;
 
 import java.util.List;
+import java.util.Random;
+	
 
 public class Pedido {
 	
@@ -22,6 +24,11 @@ public class Pedido {
 		this.troco = troco;
 		this.taxaServico = taxaServico;
 	}
+	
+	
+    Random gerador = new Random();
+
+	
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -61,10 +68,33 @@ public class Pedido {
 	
 	public void teste(List<String> itensVendidos) {
 		//int i = 0;
+		
+		System.out.println("Nota fiscal do Pedido:");
+		System.out.println("Numero do cupom fiscal: "+ gerador.nextInt(1000));
+		//            System.out.println(gerador.nextInt(26));
+
+		System.out.println("--------------------------");
+		System.out.println("Lista dos Pedidos:");
+		System.out.println("--------------------------");
 		for(int i = 0; i < itensVendidos.size(); i++ ) {
 			//itensVendidos.get(i);
 			System.out.println(itensVendidos.get(i));
 		}
+		
+		System.out.println("-------------------------------");
+		
+		System.out.println("Nome do cliente: " + nomeCliente);
+		
+		System.out.println("---------------------------------");
+		
+		
+		System.out.println("Valor total do pedido: R$ " + valorTotal);
+		System.out.println("Valor final com a taxa de servico:" + valorTotal * taxaServico);
+		
+		
+		
+		
+		
 	}
 	
 	
