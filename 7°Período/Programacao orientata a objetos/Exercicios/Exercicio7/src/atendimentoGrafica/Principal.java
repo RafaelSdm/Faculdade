@@ -219,7 +219,7 @@ public class Principal {
 				
 			}else if(opcaoEntrada == 4) {
 				confeccao.mostrarPedidosConfeccao(listaConfeccao);
-				System.out.println("teste");
+				//System.out.println("teste");
 
 			}else {
 				System.out.println("Voce decidiu sair do programa");
@@ -234,9 +234,7 @@ public class Principal {
 		System.out.println("Obrigado por entrar em nosso programa!");
 		
 		
-		for(Confeccao cf: listaConfeccao) {
-			System.out.println(cf.getNomeCliente());
-		}
+
 
 
 		
