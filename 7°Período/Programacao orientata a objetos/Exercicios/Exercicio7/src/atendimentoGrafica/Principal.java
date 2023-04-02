@@ -3,22 +3,28 @@ package atendimentoGrafica;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
+
+
 
 
 public class Principal {
 	
 	public static void main(String[] args) {
-		
+        Random rand = new Random();
+        int numeroPedido;
 		ArrayList<Gerente> listaGerente = new ArrayList<Gerente>();
 		ArrayList<Empregado> listaEmpregado = new ArrayList<Empregado>();
 		ArrayList<EmpregadoTerceirizado>  listaEmpregadoTerceirizado = new ArrayList<EmpregadoTerceirizado>();
 		ArrayList<ProdutoImpressao> listaProdutoImpressao = new ArrayList<ProdutoImpressao>();
+		ArrayList<Confeccao> listaConfeccao = new ArrayList<Confeccao>();
 		
 		//List<Integer> pedidoCliente = null;
 		
         ArrayList<Integer> listaPedido = new ArrayList<>();
 
-
+        Confeccao confeccao = new Confeccao("teste", 123, 123.00, listaPedido);
+        listaConfeccao.add(confeccao);
 		
 		int i = 1;
 		
@@ -102,6 +108,7 @@ public class Principal {
 			System.out.println("[1] - Pegar pedido do cliente");
 			System.out.println("[2] - Cadastrar um novo Funcionario");
 			System.out.println("[3] - Sair do programa");
+			System.out.println("[4] - Mostrar pedidos a serem confeccionados");
 			System.out.println("-----------------------------------");
 			
 			
@@ -150,7 +157,17 @@ public class Principal {
 						valorFinal = produtoImpressao.calcularPedido(listaProdutoImpressao, listaPedido);
 						
 						System.out.println("o valor da compra foi de " + valorFinal);
-						System.out.println(listaPedido);
+						numeroPedido = rand.nextInt(4500);
+						System.out.println("Seu numero de pedido é: " + numeroPedido);
+						//System.out.println(listaPedido);
+						//public Confeccao(String nomeCliente, int numeroPedido, double precoTotal, ArrayList<Integer> itensPedido) {
+						
+						confeccao = new Confeccao(nomeCliente, numeroPedido, valorFinal, listaPedido);
+						listaConfeccao.add(confeccao);
+						
+						
+						
+						
 						j = 0;
 
 					}
@@ -200,6 +217,10 @@ public class Principal {
 				System.out.println("Funcionario cadastrado com sucesso");
 				System.out.println();
 				
+			}else if(opcaoEntrada == 4) {
+				confeccao.mostrarPedidosConfeccao(listaConfeccao);
+				System.out.println("teste");
+
 			}else {
 				System.out.println("Voce decidiu sair do programa");
 				i = 0;
@@ -213,11 +234,10 @@ public class Principal {
 		System.out.println("Obrigado por entrar em nosso programa!");
 		
 		
-		
-		for(Empregado emp: listaEmpregado) {
-			System.out.println(emp.getNome());
-			
+		for(Confeccao cf: listaConfeccao) {
+			System.out.println(cf.getNomeCliente());
 		}
+
 
 		
 	}
