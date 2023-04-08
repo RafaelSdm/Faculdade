@@ -12,7 +12,7 @@ public class ModelLivro {
 		
 	}
 	
-	public ModelLivro(Integer id, String nome, String autor, String ano_publicacao) {
+	public void setModelLivro(Integer id, String nome, String autor, String ano_publicacao) {
 		this.setId(id);
 		this.setNome(nome);
 		this.setAutor(autor);
@@ -49,6 +49,16 @@ public class ModelLivro {
 
 	public void setAno_publicacao(String ano_publicacao) {
 		this.ano_publicacao = ano_publicacao;
+	}
+	
+	
+	public void mostrarLivro(ModelLivro teste) {
+		System.out.println("Nome do livro:"  + teste.nome);
+		System.out.println("Id livro: " + teste.id );
+		System.out.println("Autor do livro:" + teste.autor);
+		System.out.println("Ano de pulicacao do livro: " + teste.ano_publicacao);
+		
+		
 	}
 	
 	
