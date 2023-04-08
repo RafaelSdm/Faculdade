@@ -47,7 +47,13 @@ public class ViewLivro  extends JFrame{
 	    add(ano_publicacao);
 	    
 	    
-	    visor = new JLabel("fodase");
+	    visor = new JLabel(" ");
+	    add(visor);
+	    
+	    visor = new JLabel(" ");
+	    add(visor);
+	    
+	    visor = new JLabel(" ");
 	    add(visor);
 	    
 	    botao = new JButton("Cadastrar Livro");
@@ -81,10 +87,17 @@ public class ViewLivro  extends JFrame{
 		    botao.addActionListener(botaoBehavior);
 	}
 
-	public void setVisor(String result){
-		    visor.setText(result);
+	public void setVisor(ModelLivro result){
+		    //visor.setText("Nome do livro: " + result.getNome());
+		    //visor.setText(result.getNome());
+		    //visor.setText(result.getAutor());
+		    //visor.setText(result.getAno_publicacao());
+		    visor.setText("Nome: " + result.getNome() + "Autor: " + result.getAutor() + "Ano Publicacao: " + result.getAno_publicacao());
+
+
+
 	}
-	
+
 
 	
 	

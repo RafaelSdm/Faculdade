@@ -11,9 +11,9 @@ public class ControllerLivro {
 	ViewLivro viewLivro;
 	
 	
-	public ControllerLivro(ModelLivro modelLivro, ViewLivro viewLivro ) {
-		modelLivro = modelLivro;
-		viewLivro = viewLivro;
+	public ControllerLivro(ModelLivro amodelLivro, ViewLivro aviewLivro ) {
+		modelLivro = amodelLivro;
+		viewLivro = aviewLivro;
 		
 	    viewLivro.setBotaoBehavior(new BotaoBehavior());
 
@@ -29,8 +29,20 @@ public class ControllerLivro {
 			String autor = viewLivro.getautor();
 			String ano_publicacao = viewLivro.getanopublicacao();
 			
+			Integer id1 = Integer.parseInt(id);
+			
+			modelLivro.setModelLivro(id1, nome, autor, ano_publicacao);
 			
 			
+			//String resultado = modelLivro.retornaNome(nome);
+			//String resultado = modelLivro
+			
+			
+			
+			
+			
+			viewLivro.setVisor(modelLivro);
+			//viewLivro.setVisor1(modelLivro);
 			
 			
 		}

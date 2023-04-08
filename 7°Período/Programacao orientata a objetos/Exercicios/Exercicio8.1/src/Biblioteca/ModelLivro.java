@@ -52,14 +52,23 @@ public class ModelLivro {
 	}
 	
 	
-	public void mostrarLivro(ModelLivro teste) {
-		System.out.println("Nome do livro:"  + teste.nome);
-		System.out.println("Id livro: " + teste.id );
-		System.out.println("Autor do livro:" + teste.autor);
-		System.out.println("Ano de pulicacao do livro: " + teste.ano_publicacao);
+	
+	public String retornaNome(String nome) {
+		return nome;
+	}
+	
+	
+	
+	public void mostrarLivro() {
+		System.out.println("Nome do livro:"  + nome);
+		System.out.println("Id livro: " + id );
+		System.out.println("Autor do livro:" + autor);
+		System.out.println("Ano de pulicacao do livro: " + ano_publicacao);
 		
 		
 	}
+	
+	
 	
 	
 	
