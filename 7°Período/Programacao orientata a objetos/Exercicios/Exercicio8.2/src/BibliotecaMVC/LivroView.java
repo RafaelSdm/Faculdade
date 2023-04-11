@@ -43,6 +43,7 @@ public class LivroView {
         btnMostrarLivros = new JButton("Mostrar Livros");
 
         JPanel panel = new JPanel(new GridLayout(6, 2));
+    
         panel.add(lblId);
         panel.add(txtId);
         panel.add(lblNome);
@@ -75,7 +76,7 @@ public class LivroView {
                 }
 
                 try {
-                    id = Integer.parseInt(txtId.getText());
+                	id = Integer.parseInt(txtId.getText());
                     ano = Integer.parseInt(anoString);
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(null, "O ID e o ano de publicação devem ser números inteiros.");
