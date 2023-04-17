@@ -103,7 +103,7 @@ public class LivroView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 List<Livro> livros = controller.getLivros();
-
+     
                 if (livros.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Nenhum livro cadastrado.");
                 } else {
@@ -116,5 +116,15 @@ public class LivroView {
             }
         });
     }
+
+	public void exibirTelaCadastro() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void exibirListaCategorias() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 

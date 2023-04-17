@@ -5,6 +5,15 @@ public class Principal {
         LivroController controller = new LivroController();
         LivroView view = new LivroView(controller);
         
-        CategoriaView  teste = new CategoriaView();
+        CategoriaController controller1 = new CategoriaController(null);
+        CategoriaView view1 = new CategoriaView();
+
+        // Exibe a tela de cadastro de categoria
+        view.exibirTelaCadastro();
+
+        // Exibe a lista de categorias cadastradas
+        view.exibirListaCategorias();
+
+        
     }
 }
