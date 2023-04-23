@@ -6,4 +6,5 @@
  *
  */
 module PetShopMVC {
+	requires java.desktop;
 }

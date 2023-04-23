@@ -1,5 +1,7 @@
 package petshop_mvc;
 
+import java.util.ArrayList;
+
 public class Proprietario {
 	
 	
@@ -7,7 +9,7 @@ public class Proprietario {
 	private int id;
 	private String cpf;
 	private String endereco;
-	
+	private ArrayList<Proprietario> proprietarios = new ArrayList<>();
 	
 	
 	public Proprietario(String nome, int id, String cpf, String endereco) {
@@ -45,8 +47,22 @@ public class Proprietario {
 	}
 	
 	
+	
+    
+    public void cadastrarProprietario(String nome, int id, String cpf, String endereco) {
+        Proprietario proprietario = new Proprietario(nome, id, cpf, endereco);
+        proprietarios.add(proprietario);
+    }
+    
+    public ArrayList<Proprietario> getProprietarios() {
+        return proprietarios;
+    }
 
 	
 	
+	@Override
+	public String toString() {
+		return "Proprietario nome = " + nome + ", id = " + id + ", cpf = " + cpf + ", endereco = " + endereco;
+	}
 
 }
