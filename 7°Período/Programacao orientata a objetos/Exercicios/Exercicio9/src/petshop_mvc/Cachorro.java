@@ -1,10 +1,13 @@
 package petshop_mvc;
 
+import java.util.ArrayList;
+
 public class Cachorro extends Animal {
 	
 	private String porte;
 	private String peso;
-	
+	private ArrayList<Cachorro> cachorros = new ArrayList<>();
+
 	
 	
 	
@@ -30,6 +33,17 @@ public class Cachorro extends Animal {
 		this.peso = peso;
 	}
 	
+	
+	
+	
+    public void cadastrarCachorro(int id, String nome, String cor, int idade, String sexo, String raca, String porte, String peso, String string) {
+        Cachorro cachorro = new Cachorro(id, nome, cor, idade, sexo, raca, porte, peso);
+        cachorros.add(cachorro);
+    }
+    
+    public ArrayList<Cachorro> getCachorros() {
+        return cachorros;
+    }
 
 	
 	
