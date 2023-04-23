@@ -45,6 +45,14 @@ public class Cachorro extends Animal {
         return cachorros;
     }
 
+
+
+
+	@Override
+	public String toString() {
+		return "Cachorro [porte=" + porte + ", peso=" + peso + ", cachorros=" + cachorros + "]";
+	}
+
 	
 	
 	
