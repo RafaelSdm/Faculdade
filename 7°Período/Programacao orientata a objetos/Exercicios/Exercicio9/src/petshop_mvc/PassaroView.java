@@ -28,7 +28,7 @@ public class PassaroView extends JFrame {
     
     
     public PassaroView() {
-        super("Pet Shop - Cadastro de Gatos");
+        super("Pet Shop - Cadastro de Passaros");
 
         // Define o layout da janela principal
         setLayout(new BorderLayout());
