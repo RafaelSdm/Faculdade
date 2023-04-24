@@ -56,6 +56,9 @@ public class ProprietarioView extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
+    
+    
+    /*
 
     public Proprietario cadastrarProprietario() {
         String nome = campoNome.getText();
@@ -64,6 +67,8 @@ public class ProprietarioView extends JFrame {
         String endereco = campoEndereco.getText();
         return new Proprietario(nome, id, cpf, endereco);
     }
+    
+    */
     public void mostrarProprietarios(ArrayList<Proprietario> proprietarios) {
         listaProprietarios.setListData(proprietarios.toArray(new Proprietario[0]));
     }
@@ -75,6 +80,28 @@ public class ProprietarioView extends JFrame {
     public void mostrarMensagem(String mensagem) {
         JOptionPane.showMessageDialog(this, mensagem);
     }
+    
+    
+	public String getCampoNome() {
+		return campoNome.getText();
+	}
+	
+	
+	public String getCampoId() {
+		return campoId.getText();
+	}
+	
+	public String getCampoCpf() {
+		return campoCpf.getText();
+	}
+	
+	public String getCampoEndereco() {
+		return campoEndereco.getText();
+	}
+	
 }
+
+
+
 
 

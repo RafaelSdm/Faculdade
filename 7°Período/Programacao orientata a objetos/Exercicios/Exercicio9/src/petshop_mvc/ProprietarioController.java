@@ -7,6 +7,8 @@ import java.util.ArrayList;
 public class ProprietarioController {
     private Proprietario model;
     private ProprietarioView view;
+	static ArrayList<Proprietario> proprietarios = new ArrayList<>();
+
 
     public ProprietarioController(Proprietario model, ProprietarioView view) {
         this.model = model;
@@ -19,10 +21,18 @@ public class ProprietarioController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                Proprietario proprietario = view.cadastrarProprietario();
-                model.cadastrarProprietario(proprietario.getNome(), proprietario.getId(), proprietario.getCpf(), proprietario.getEndereco());
+                //Proprietario proprietario = view.cadastrarProprietario();
+                //model.cadastrarProprietario(proprietario.getNome(), proprietario.getId(), proprietario.getCpf(), proprietario.getEndereco());
+                String nome = view.getCampoNome();
+                String id = view.getCampoId();
+                String cpf = view.getCampoCpf();
+                String endereco = view.getCampoEndereco();
+                
+                Proprietario proprietario = new Proprietario(nome, Integer.parseInt(id), cpf, endereco);
+                proprietarios.add(proprietario);
                 view.mostrarMensagem("Proprietário cadastrado com sucesso!");
-                view.mostrarProprietarios(model.getProprietarios());
+                
+                view.mostrarProprietarios(proprietarios);
             } catch (NumberFormatException ex) {
                 view.mostrarMensagem("Por favor, preencha todos os campos corretamente.");
             }

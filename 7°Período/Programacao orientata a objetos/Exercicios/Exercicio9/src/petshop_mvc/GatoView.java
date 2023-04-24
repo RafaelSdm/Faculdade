@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 
 public class GatoView extends JFrame {
     private JList<Gato> listaGatos = new JList<>();
-    private JTextField campoNome = new JTextField();
+    JTextField campoNome = new JTextField();
     private JTextField campoId = new JTextField();
     private JTextField campoCor = new JTextField();
     private JTextField campoSexo = new JTextField();
@@ -24,6 +24,7 @@ public class GatoView extends JFrame {
     private JTextField campoRaca = new JTextField();
     private JTextField campoPeso = new JTextField();
     private JTextField campoPorte = new JTextField();
+    private JTextField campoProprietario = new JTextField();
     private JButton botaoCadastrar = new JButton("Cadastrar");
     
     
@@ -53,6 +54,9 @@ public class GatoView extends JFrame {
         painelCadastro.add(new JLabel("Raca:"));
         painelCadastro.add(campoRaca);
         painelCadastro.add(new JLabel());
+        painelCadastro.add(new JLabel("ID funcionario:"));
+        painelCadastro.add(campoProprietario);
+        
         painelCadastro.add(botaoCadastrar);
 
         // Cria o painel de listagem
@@ -72,7 +76,7 @@ public class GatoView extends JFrame {
     }
     
     
-    
+    /*
     public Gato cadastrarGato() {
         String nome = campoNome.getText();
         int id = Integer.parseInt(campoId.getText());
@@ -82,9 +86,12 @@ public class GatoView extends JFrame {
         String raca = campoRaca.getText();
         int idade = Integer.parseInt(campoIdade.getText());
         String porte = campoPorte.getText();
-        return new Gato(id, nome, cor, idade, sexo, raca, porte, peso);
+        Proprietario proprietario = campoProprietario.getCampoProprietario();
+        return new Gato(id, nome, cor, idade, sexo, raca, porte, peso, proprietario);
         //int id, String nome, String cor, int idade, String sexo, String raca, String porte, String peso
     }
+    
+    */
     public void mostrarGatos(ArrayList<Gato> gatos) {
         listaGatos.setListData(gatos.toArray(new Gato[0]));
     }
@@ -96,10 +103,85 @@ public class GatoView extends JFrame {
     public void mostrarMensagem(String mensagem) {
         JOptionPane.showMessageDialog(this, mensagem);
     }
+    
+    
+    
+	public String getCampoNome() {
+		return campoNome.getText();
+	}
+	
+	
+    
+	public String getCampoId() {
+		return campoId.getText();
+	}
+	
+	
+    
+	public String getCampoCor() {
+		return campoCor.getText();
+	}
+	
+	
+    
+	public String getCampoSexo() {
+		return campoNome.getText();
+	}
+	
+	
+	
+    
+	public String getCampoIdade() {
+		return campoIdade.getText();
+	}
+	
+	
+    
+	public String getCampoRaca() {
+		return campoRaca.getText();
+	}
+	
+	
+    
+	public String getCampoPeso() {
+		return campoPeso.getText();
+	}
+	
+	
+    
+	public String getCampoPorte() {
+		return campoPorte.getText();
+	}
+	
+	
+    
+	public String getCampoProprietario() {
+		return campoProprietario.getText();
+	}
+	
+	
+
+	
+	
 	
 }
 
 
+
+/*
+private JList<Gato> listaGatos = new JList<>();
+private JTextField campoNome = new JTextField();
+private JTextField campoId = new JTextField();
+private JTextField campoCor = new JTextField();
+private JTextField campoSexo = new JTextField();
+private JTextField campoIdade = new JTextField();
+private JTextField campoRaca = new JTextField();
+private JTextField campoPeso = new JTextField();
+private JTextField campoPorte = new JTextField();
+private JTextField campoProprietario = new JTextField();
+private JButton botaoCadastrar = new JButton("Cadastrar");
+
+*/
 
 
 

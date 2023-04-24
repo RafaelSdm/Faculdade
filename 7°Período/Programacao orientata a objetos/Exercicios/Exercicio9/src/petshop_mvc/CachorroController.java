@@ -22,7 +22,7 @@ public class CachorroController {
                 Cachorro cachorro = view.cadastrarCachorro();
                 model.cadastrarCachorro(cachorro.getId(), cachorro.getNome(), cachorro.getCor(), cachorro.getIdade(), cachorro.getSexo(), cachorro.getPorte(), cachorro.getRaca(), cachorro.getPorte(), cachorro.getPeso());
                 //int id, String nome, String cor, int idade, String sexo, String raca, String porte, String peso
-                view.mostrarMensagem("Gato cadastrado com sucesso!");
+                view.mostrarMensagem("Cachorro cadastrado com sucesso!");
                 view.mostrarCachorros(model.getCachorros());
             } catch (NumberFormatException ex) {
                 view.mostrarMensagem("Por favor, preencha todos os campos corretamente.");
