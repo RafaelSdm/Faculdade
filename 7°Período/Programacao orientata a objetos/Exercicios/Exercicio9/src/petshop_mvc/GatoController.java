@@ -29,6 +29,7 @@ public class GatoController {
                 String raca = view.getCampoRaca();
                 String porte = view.getCampoPorte();
                 String peso = view.getCampoPeso();
+                String idProp = view.getCampoProprietario();
                 //Pertence liga = view.cadastrarGato();
                 //model.cadastrarGato(gato.getId(), gato.getNome(), gato.getCor(), gato.getIdade(), gato.getSexo(), gato.getPorte(), gato.getRaca(), gato.getPorte(), gato.getPeso());
                 //int id, String nome, String cor, int idade, String sexo, String raca, String porte, String peso
@@ -37,7 +38,7 @@ public class GatoController {
                 for (Proprietario ln: ProprietarioController.proprietarios){
                 	
                 	
-                	if(ln.getId() == Integer.parseInt(id)) {
+                	if(ln.getId() == Integer.parseInt(idProp)) {
                 		proprietario = ln;
                 	}
                 		
