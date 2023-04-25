@@ -15,7 +15,7 @@ public class Principal {
         
         
         
-        Cachorro model2 = new Cachorro(0, null, null, 0, null, null, null, null);
+        Cachorro model2 = new Cachorro(0, null, null, 0, null, null, null, null, null);
         CachorroView view2 = new CachorroView();
         CachorroController controller2 = new CachorroController(model2, view2);
         

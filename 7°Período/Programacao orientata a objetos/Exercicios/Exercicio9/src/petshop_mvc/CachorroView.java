@@ -24,6 +24,8 @@ public class CachorroView extends JFrame {
     private JTextField campoRaca = new JTextField();
     private JTextField campoPeso = new JTextField();
     private JTextField campoPorte = new JTextField();
+    private JTextField campoProprietario = new JTextField();
+
     private JButton botaoCadastrar = new JButton("Cadastrar");
     
     
@@ -53,6 +55,9 @@ public class CachorroView extends JFrame {
         painelCadastro.add(new JLabel("Raca:"));
         painelCadastro.add(campoRaca);
         painelCadastro.add(new JLabel());
+        painelCadastro.add(new JLabel("ID funcionario:"));
+        painelCadastro.add(campoProprietario);
+        
         painelCadastro.add(botaoCadastrar);
 
         // Cria o painel de listagem
@@ -71,7 +76,7 @@ public class CachorroView extends JFrame {
         setVisible(true);
     }
     
-    
+    /*
     
     public Cachorro cadastrarCachorro() {
         String nome = campoNome.getText();
@@ -85,6 +90,8 @@ public class CachorroView extends JFrame {
         return new Cachorro(id, nome, cor, idade, sexo, raca, porte, peso);
         //int id, String nome, String cor, int idade, String sexo, String raca, String porte, String peso
     }
+    
+    */
     public void mostrarCachorros(ArrayList<Cachorro> cachorros) {
         listaCachorros.setListData(cachorros.toArray(new Cachorro[0]));
     }
@@ -96,6 +103,62 @@ public class CachorroView extends JFrame {
     public void mostrarMensagem(String mensagem) {
         JOptionPane.showMessageDialog(this, mensagem);
     }
+    
+    
+    
+	public String getCampoNome() {
+		return campoNome.getText();
+	}
+	
+	
+    
+	public String getCampoId() {
+		return campoId.getText();
+	}
+	
+	
+    
+	public String getCampoCor() {
+		return campoCor.getText();
+	}
+	
+	
+    
+	public String getCampoSexo() {
+		return campoNome.getText();
+	}
+	
+	
+	
+    
+	public String getCampoIdade() {
+		return campoIdade.getText();
+	}
+	
+	
+    
+	public String getCampoRaca() {
+		return campoRaca.getText();
+	}
+	
+	
+    
+	public String getCampoPeso() {
+		return campoPeso.getText();
+	}
+	
+	
+    
+	public String getCampoPorte() {
+		return campoPorte.getText();
+	}
+	
+	
+    
+	public String getCampoProprietario() {
+		return campoProprietario.getText();
+	}
+	
 	
 }
 

@@ -48,7 +48,7 @@ public class Passaro extends Animal {
 
 	@Override
 	public String toString() {
-		return "Passaro [porte=" + numeroAnilha + ", Proprietario = "+ this.getPropretario().getNome();
+		return "Passaro: Nome: " + this.getNome() + "ID: " + this.getId() + " Numero da anilhaa = " + numeroAnilha + ", Proprietario = "+ this.getPropretario().getNome();
 	}
 
 

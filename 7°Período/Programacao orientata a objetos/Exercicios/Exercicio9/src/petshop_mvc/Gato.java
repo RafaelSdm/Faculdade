@@ -54,7 +54,7 @@ public class Gato extends Animal {
 
 	@Override
 	public String toString() {
-		return "Gato [porte=" + porte + ", Proprietario = "+ this.getProprietario().getNome();
+		return "Gato - Nome:" + this.getNome() + "ID = " + this.getId() +  " porte=" + porte + " Proprietario = "+ this.getProprietario().getNome();
 	}
 
 
