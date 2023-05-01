@@ -54,6 +54,22 @@ public class BancoA implements Banco {
 	public int getUserBanco() {
 		return conta.getNumeroConta();
 	}
+	
+	
+	public void transferencia(Conta contaT, Double trasnferencia) {
+		
+		//trasnferencia = trasnferencia + contaT.getSaldo();
+		//valorTotal = transferencia + 2000.00;
+		Double adicionar = contaT.getSaldo() + trasnferencia ;
+		Double retirar = conta.getSaldo() - trasnferencia ;
+
+		System.out.println(conta.getSaldo());
+		System.out.println("valor do adicionar: " + adicionar);
+		//conta.setSaldo(conta.getSaldo() - 3000.00);
+		conta.setSaldo(retirar);
+		contaT.setSaldo(adicionar);
+	}
+	
 
 	@Override
 	public String toString() {
