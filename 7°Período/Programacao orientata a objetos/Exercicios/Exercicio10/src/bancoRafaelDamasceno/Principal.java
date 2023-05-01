@@ -38,6 +38,10 @@ public class Principal {
 		
 		
 		System.out.println("Valor do banco pos da trasferencia:" + banco1.getExtrato());
+		
+		
+		System.out.println("R$5000 foi transferido para o banco A");
+        banco2.transferencia(conta, 900.00);
 
 	}
 
