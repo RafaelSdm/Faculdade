@@ -58,7 +58,7 @@ def dijkstra(grafo, origem, destino=None):
         return distancias, predecessores
 
 
-# Exemplo de grafo
+
 grafo = {
     'A': {'E': 2},
     'B': {'C': 2},
