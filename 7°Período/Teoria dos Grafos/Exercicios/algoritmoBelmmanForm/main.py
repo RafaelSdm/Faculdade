@@ -37,7 +37,7 @@ def bellman_ford(grafo, inicial, final):
     return caminho
 
 
-# exemplo de uso
+
 grafo = {
     'A': {'G': 10, 'B': 6, 'F': 10},
     'B': {'C': 5, 'F': 3, 'G': 7},
