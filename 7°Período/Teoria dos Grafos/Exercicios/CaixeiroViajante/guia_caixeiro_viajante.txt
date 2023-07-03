@@ -1,0 +1,43 @@
+Guia de instalação das bibliotecas do python:
+
+1 - heapq:
+Ele usa uma fila de prioridade (heap) para escolher o próximo vértice com base na distância mínima.
+
+O algoritmo começa com a cidade inicial e, em seguida, itera até que todas as cidades sejam visitadas. 
+Em cada iteração, o algoritmo encontra a cidade vizinha mais próxima que ainda não foi visitada e a adiciona ao caminho. 
+A distância mínima dessa cidade vizinha é atualizada e ela é adicionada à fila de prioridade.
+
+Como instalar:
+
+pip install heapq
+* Provavelmente a biblioteca heapq já vem instalada no python padrão, ou seja vai ser só copiar e colar que 
+provavelmente o codigo deve funcionar.
+
+
+2 - itertools:
+
+No código fornecido, a biblioteca itertools é usada para gerar todas as permutações possíveis dos vertices
+
+A função itertools.permutations(iterable, r=None) retorna um iterador que gera todas as permutações possíveis dos elementos do iterable. 
+No caso do código, o iterable é a lista de vertices.
+
+Como instalar:
+
+pip install intertools
+* Provavelmente a biblioteca intertools já vem instalada no python padrão, ou seja vai ser só copiar e colar que 
+provavelmente o codigo deve funcionar.
+
+
+3 - Sys:
+Neste caso específico, sys.maxsize é atribuído a todas as cidades no dicionário distancias como uma distância inicial infinita, 
+exceto para a cidade inicial, que é definida como 0. Isso permite que o algoritmo atualize as distâncias mínimas à medida que explora o grafo.
+
+pip install sys
+* Provavelmente a biblioteca sys já vem instalada no python padrão, ou seja vai ser só copiar e colar que 
+provavelmente o codigo deve funcionar.
+
+
+
+
+4 - Como gerar o caminho do arquivo que contem o grafo:
+É aconselhável adicionar o caminho do arquivo de forma manual, sem o CTRL+C, CTRL+V, uma vez que o python as vezes altera algumas informações de leitura da cópia. 
