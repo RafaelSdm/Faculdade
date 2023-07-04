@@ -1,0 +1,11 @@
+Dicas para rodar o codigo na maquina:
+
+Em alguns testes que fizemos para informar as expressões matemáticas, ele perdia a informação dos operadores.
+Por isso, estamos deixando aqui, as expressões, e com isso é so copiar e colar no código assim que for requisitado e provavelmente vai funcionar
+
+
+(10 + 15) * 18
+4 + 15 + 135
+(10 + 8) * (95 + 150)
+(15 * 25) + (15 * 35) - (15 * 45)
+(134 + 345) * (324 / 154) * (866 + 234) * (100 – 154)
