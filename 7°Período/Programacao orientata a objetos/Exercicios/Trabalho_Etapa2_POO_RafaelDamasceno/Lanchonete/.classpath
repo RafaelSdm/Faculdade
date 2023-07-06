@@ -7,5 +7,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/rafae/Downloads/mysql-connector-java-5.1.6-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rafae/OneDrive/Área de Trabalho/pdff/itextpdf-5.5.13.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rafae/OneDrive/Área de Trabalho/pdff/itextpdf-5.5.13.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rafae/OneDrive/Área de Trabalho/pdff/itextpdf-5.5.13.3-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
