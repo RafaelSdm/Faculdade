@@ -14,13 +14,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import java.sql.SQLException;
+
+import Conexao.Conexao;
+import model.lancheDAO;
+
 public class lancheControler {
 	private lanche model;
 	private lancheView view;
 	private List<Pessoa> clientes;
 	private List<lanche> pedidos;
 	private List<String> sabores;
-	
+
 	public lancheControler(lanche model, lancheView view) {
 		super();
 		this.model = model;
@@ -35,10 +40,8 @@ public class lancheControler {
 		sabores.add("Lanche caprixado");
 		sabores.add("Lanche a moda do chef");
 		view.atualizarListaSabores(sabores);
-		
-		
 	}
-	
+
 	public class PedidoListener implements ActionListener {
 
 		@Override
@@ -51,39 +54,52 @@ public class lancheControler {
 			model.setPessoa(pessoa);
 			pedidos.add(new lanche(sabor, tamanho, pessoa));
 			JOptionPane.showMessageDialog(null, "Pedido Feito!");
-			
 
+			Conexao conexao = new Conexao();
+			conexao.conectarBanco();
+			lancheDAO lancheDAO = new lancheDAO();
+
+			try {
+				lancheDAO.insertCadastro(sabor, tamanho, pessoa);
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 		}
-
 	}
-	
-public class VerPedidoListener implements ActionListener{
-		
+
+	public class VerPedidoListener implements ActionListener {
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			lanchePedidoView viewPedido = new lanchePedidoView(pedidos);
 			viewPedido.setVisible(true);
-			
 		}
 	}
-	
-	public class NovoClienteListener implements ActionListener{
-		
+
+	public class NovoClienteListener implements ActionListener {
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			cadastroViewLanche cadastrar = new cadastroViewLanche(lancheControler.this);
 			cadastrar.setVisible(true);
 		}
-		
 	}
-	
-	public void cadastrarCliente (String nome, String cpf) {
+
+	public void cadastrarCliente(String nome, String cpf) {
 		Pessoa pessoa = new Pessoa(nome, cpf);
 		clientes.add(pessoa);
 		view.atualizarListaCliente(clientes);
-	}
-	
-	
-	
-}
 
+		Conexao conexao = new Conexao();
+		conexao.conectarBanco();
+		lancheDAO lancheDAO = new lancheDAO();
+		
+		/*
+		try {
+			lancheDAO.insertCliente(nome, cpf);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		*/
+	}
+}

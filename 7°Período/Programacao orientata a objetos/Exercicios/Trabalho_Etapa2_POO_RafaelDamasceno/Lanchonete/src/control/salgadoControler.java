@@ -14,13 +14,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import java.sql.SQLException;
+
+import Conexao.Conexao;
+import model.SalgadoDAO;
+
 public class salgadoControler {
 	private salgado model;
 	private salgadoView view;
 	private List<Pessoa> clientes;
 	private List<salgado> pedidos;
 	private List<String> sabores;
-	
+
 	public salgadoControler(salgado model, salgadoView view) {
 		super();
 		this.model = model;
@@ -35,10 +40,8 @@ public class salgadoControler {
 		sabores.add("Coxinha com caputury");
 		sabores.add("cigarrete");
 		view.atualizarListaSabores(sabores);
-		
-		
 	}
-	
+
 	public class PedidoListener implements ActionListener {
 
 		@Override
@@ -51,38 +54,52 @@ public class salgadoControler {
 			model.setPessoa(pessoa);
 			pedidos.add(new salgado(sabor, tamanho, pessoa));
 			JOptionPane.showMessageDialog(null, "Pedido Feito!");
-			
 
+			Conexao conexao = new Conexao();
+			conexao.conectarBanco();
+			SalgadoDAO salgadoDAO = new SalgadoDAO();
+
+			try {
+				salgadoDAO.insertCadastro(sabor, tamanho, pessoa);
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 		}
-
 	}
-	
-public class VerPedidoListener implements ActionListener{
-		
+
+	public class VerPedidoListener implements ActionListener {
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			salgadoPedidoView viewPedido = new salgadoPedidoView(pedidos);
 			viewPedido.setVisible(true);
-			
 		}
 	}
-	
-	public class NovoClienteListener implements ActionListener{
-		
+
+	public class NovoClienteListener implements ActionListener {
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			cadastroViewSalgado cadastrar = new cadastroViewSalgado(salgadoControler.this);
 			cadastrar.setVisible(true);
 		}
-		
 	}
-	
-	public void cadastrarCliente (String nome, String cpf) {
+
+	public void cadastrarCliente(String nome, String cpf) {
 		Pessoa pessoa = new Pessoa(nome, cpf);
 		clientes.add(pessoa);
 		view.atualizarListaCliente(clientes);
+
+		Conexao conexao = new Conexao();
+		conexao.conectarBanco();
+		SalgadoDAO salgadoDAO = new SalgadoDAO();
+		
+		/*
+		try {
+			//salgadoDAO.insertCliente(nome, cpf);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		*/
 	}
-	
-	
-	
 }

@@ -1,10 +1,10 @@
 package control;
 
 import model.Pessoa;
-import model.pizza;
-import view.cadastroView;
-import view.pizzaview;
-import view.pedidoView;
+import model.salgado;
+import view.cadastroViewSalgado;
+import view.salgadoView;
+import view.salgadoPedidoView;
 
 import java.util.List;
 
@@ -14,19 +14,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import java.sql.SQLException;
-
-import Conexao.Conexao;
-import model.PizzaDAO;
-
-public class pizzaControler {
-	private pizza model;
-	private pizzaview view;
+public class salgadoControler {
+	private salgado model;
+	private salgadoView view;
 	private List<Pessoa> clientes;
-	private List<pizza> pedidos;
+	private List<salgado> pedidos;
 	private List<String> sabores;
-
-	public pizzaControler(pizza model, pizzaview view) {
+	
+	public salgadoControler(salgado model, salgadoView view) {
 		super();
 		this.model = model;
 		this.view = view;
@@ -36,66 +31,58 @@ public class pizzaControler {
 		this.view.addPedidoListener(new PedidoListener());
 		this.view.addNovoClienteListener(new NovoClienteListener());
 		this.view.addVerPedidoListener(new VerPedidoListener());
-		sabores.add("Portuguesa");
-		sabores.add("Vegana");
-		sabores.add("Flango com Capytury");
+		sabores.add("Coxinha de pizza");
+		sabores.add("Coxinha com caputury");
+		sabores.add("cigarrete");
 		view.atualizarListaSabores(sabores);
+		
+		
 	}
-
+	
 	public class PedidoListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String sabor = view.getSelectSabor();
 			String tamanho = view.getTamanho();
-			String borda = view.getBorda();
 			Pessoa pessoa = clientes.get(view.getCliente());
-			model.setBorda(borda);
 			model.setSabor(sabor);
 			model.setTamanho(tamanho);
 			model.setPessoa(pessoa);
-			pedidos.add(new pizza(sabor, tamanho, pessoa, borda));
+			pedidos.add(new salgado(sabor, tamanho, pessoa));
 			JOptionPane.showMessageDialog(null, "Pedido Feito!");
+			
 
-			Conexao conexao = new Conexao();
-			conexao.conectarBanco();
-			PizzaDAO pizzaDAO = new PizzaDAO();
-
-			try {
-				pizzaDAO.insertCadastro(sabor, tamanho, borda, pessoa);
-			} catch (SQLException e1) {
-				e1.printStackTrace();
-			}
 		}
+
 	}
-
-	public class VerPedidoListener implements ActionListener {
-
+	
+public class VerPedidoListener implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			pedidoView viewPedido = new pedidoView(pedidos);
+			salgadoPedidoView viewPedido = new salgadoPedidoView(pedidos);
 			viewPedido.setVisible(true);
+			
 		}
 	}
-
-	public class NovoClienteListener implements ActionListener {
-
+	
+	public class NovoClienteListener implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			cadastroView cadastrar = new cadastroView(pizzaControler.this);
+			cadastroViewSalgado cadastrar = new cadastroViewSalgado(salgadoControler.this);
 			cadastrar.setVisible(true);
 		}
+		
 	}
-
-	public void cadastrarCliente(String nome, String cpf) {
+	
+	public void cadastrarCliente (String nome, String cpf) {
 		Pessoa pessoa = new Pessoa(nome, cpf);
 		clientes.add(pessoa);
 		view.atualizarListaCliente(clientes);
-
-		Conexao conexao = new Conexao();
-		conexao.conectarBanco();
-		PizzaDAO pizzaDAO = new PizzaDAO();
-
-
 	}
+	
+	
+	
 }

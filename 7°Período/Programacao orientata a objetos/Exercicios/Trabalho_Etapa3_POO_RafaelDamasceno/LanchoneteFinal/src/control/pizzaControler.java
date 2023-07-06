@@ -14,18 +14,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import java.sql.SQLException;
-
-import Conexao.Conexao;
-import model.PizzaDAO;
-
 public class pizzaControler {
 	private pizza model;
 	private pizzaview view;
 	private List<Pessoa> clientes;
 	private List<pizza> pedidos;
 	private List<String> sabores;
-
+	
+	
 	public pizzaControler(pizza model, pizzaview view) {
 		super();
 		this.model = model;
@@ -40,8 +36,10 @@ public class pizzaControler {
 		sabores.add("Vegana");
 		sabores.add("Flango com Capytury");
 		view.atualizarListaSabores(sabores);
+		
+		
 	}
-
+	
 	public class PedidoListener implements ActionListener {
 
 		@Override
@@ -56,46 +54,38 @@ public class pizzaControler {
 			model.setPessoa(pessoa);
 			pedidos.add(new pizza(sabor, tamanho, pessoa, borda));
 			JOptionPane.showMessageDialog(null, "Pedido Feito!");
+			
 
-			Conexao conexao = new Conexao();
-			conexao.conectarBanco();
-			PizzaDAO pizzaDAO = new PizzaDAO();
-
-			try {
-				pizzaDAO.insertCadastro(sabor, tamanho, borda, pessoa);
-			} catch (SQLException e1) {
-				e1.printStackTrace();
-			}
 		}
+
 	}
-
-	public class VerPedidoListener implements ActionListener {
-
+	
+public class VerPedidoListener implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			pedidoView viewPedido = new pedidoView(pedidos);
 			viewPedido.setVisible(true);
+			
 		}
 	}
-
-	public class NovoClienteListener implements ActionListener {
-
+	
+	public class NovoClienteListener implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			cadastroView cadastrar = new cadastroView(pizzaControler.this);
 			cadastrar.setVisible(true);
 		}
+		
 	}
-
-	public void cadastrarCliente(String nome, String cpf) {
+	
+	public void cadastrarCliente (String nome, String cpf) {
 		Pessoa pessoa = new Pessoa(nome, cpf);
 		clientes.add(pessoa);
 		view.atualizarListaCliente(clientes);
-
-		Conexao conexao = new Conexao();
-		conexao.conectarBanco();
-		PizzaDAO pizzaDAO = new PizzaDAO();
-
-
 	}
+	
+	
+	
 }
