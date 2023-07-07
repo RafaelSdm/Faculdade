@@ -1,51 +1,49 @@
 package control;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.SQLException;
+import java.io.FileOutputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-import javax.swing.JOptionPane;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 
-import Conexao.Conexao;
-import model.ExibeDAO;
-import PDF.GerarPDF;
-//import View.ViewExibe;
+public class ControllerExibe {
 
-public class ControllerExibe{
-	//ViewExibe cadExibe;
-	String titulo = "Relatório";
-	String localPdf = "D:\\pdfPadrao\\lista.pdf";
-	
+    public static void main(String[] args) {
+        String jdbcURL = "jdbc:mysql://localhost:3306/lanchonetebd";
+        String username = "seu_usuario";
+        String password = "sua_senha";
 
-	
-	class BotaoBehaviorGerarPdf implements ActionListener{
-		@SuppressWarnings("static-access")
-		@Override
-		
-		public void actionPerformed(ActionEvent e) {
-			
-	    	Integer cpf = null;
+        String query = "SELECT * FROM pizza";
 
-	 
-	        	
-		    Conexao conexao = new Conexao();
-		    conexao.conectarBanco();
-		    ExibeDAO exibeDAO = new ExibeDAO();
-		    
-		    try {
-		    	String conteudo1 = exibeDAO.selectCadastroCao();
-		    	//String conteudo2 = exibeDAO.selectCadastroGato(cpf);
-		    	//String conteudo3 = exibeDAO.selectCadastroPas(cpf);
-		    	GerarPDF.gerarPdf(titulo, conteudo1, localPdf);
-			} catch (SQLException e2) {
-				// TODO Auto-generated catch block
-				e2.printStackTrace();
-			}
+        try {
+            Connection connection = DriverManager.getConnection(jdbcURL, username, password);
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet resultSet = statement.executeQuery();
 
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream("relatorio_pizza.pdf"));
+            document.open();
 
+            while (resultSet.next()) {
+                String sabor = resultSet.getString("sabor");
+                double preco = resultSet.getDouble("preco");
 
-		     
-	    }
-	}
-	
+                Paragraph paragraph = new Paragraph("Sabor: " + sabor + ", Preço: R$" + preco);
+                document.add(paragraph);
+            }
+
+            document.close();
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+            System.out.println("Relatório de pizza gerado com sucesso!");
+        } catch (Exception e) {
+            System.err.println("Erro ao gerar o relatório de pizza: " + e.getMessage());
+        }
+    }
 }
