@@ -4,7 +4,7 @@ function dados(){
     var nome = prompt('Informe seu nome')
 
     console.log(nome)
-}
+}   
 
 
 function pegarNome(){
@@ -17,5 +17,5 @@ function pegarNome(){
 
     console.log(frase)
 
-    document.querySelector(".nomePessoa").innerHTML +=  frase;
+    document.querySelector(".nomePessoa").innerHTML +=  frase
 }
