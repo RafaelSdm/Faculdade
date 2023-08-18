@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="pegarNome()">
+
+
+    <p class="nomePessoa">Olá: </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, accusantium. Harum sunt iure amet ab magnam dignissimos quae unde ducimus. Voluptatum libero dicta explicabo quasi et eos ipsam, maiores rerum?</p>
+
+
+    <form action="">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+
+        <div>
+
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" id="masculino" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexo" id="feminino" value="feminino"> 
+            <label for="feminino">Feminino</label>
+        </div>
+
+
+        <div>
+            <label for="estado_civil">Estado Civil</label>
+            <input type="radio" name="estado_civil" id="solteiro" value="solteiro">
+            <label for="estado_civil">solteiro</label>
+            <input type="radio" name="estado_civil" id="casado" value="casado">
+            <label for="estado_civil">Casado</label>
+            <input type="radio" name="estado_civil" id="enrolado" value="enrolado">
+            <label for="estado_civil">enrolado</label>
+        </div>
+
+
+
+
+
+        <div>
+            <label for="bens">Bens que possui</label>
+            <input type="checkbox" name="casa" id="casa" value="casa">
+            <label for="casa">Casa</label>
+            <input type="checkbox" name="moto" id="moto" value="moto">
+            <label for="moto">moto</label>
+            <input type="checkbox" name="carro" id="carro" value="carro"> 
+            <label for="carro">Automovel</label>
+
+        </div>
+
+
+        <div>
+            <label for="idade">Faixa de idade:</label>
+
+            <select name="idade" id="idade">
+              <option value="crianca">3 a 10 anos</option>
+              <option value="adolescente">11 a 17 anos</option>
+              <option value="adulto">18 a 32 anos</option>
+              <option value="idoso">32 a 67 anos</option>
+            </select>
+
+        </div>
+
+
+        <div>
+            <label for="hobbie">Hobby preferido:</label>
+            <select name="hobbie" id="hobbie">
+                <option value="ler">Ler livros</option>
+                <option value="jogar">jogar videogame</option>
+                <option value="estudar">Estudar</option>
+                <option value="jogo">Ver o galão da massa</option>
+                <option value="musica">Ouvir musica</option>
+            </select>
+        </div>
+
+
+
+        <div>
+            <p>Informacoes gerais:</p>
+            <textarea name="informacao" id="informacao" cols="30" rows="10"></textarea>
+        </div>
+
+
+        <div>
+            <button>Limpar dados</button>
+
+            <input type="submit" onclick="dados()" value="Enviar dados">
+        </div>
+
+
+    </form>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
