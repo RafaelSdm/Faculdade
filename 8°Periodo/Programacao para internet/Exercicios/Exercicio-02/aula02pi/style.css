@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+
+.menu span{
+
+    color: white;
+
+}
+
+.menu{
+    background-color: rgb(73, 21, 21);
+    padding: 5px;
+    height: 90px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu ul li{
+    list-style: none;
+    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    padding: 0 10px 0;
+    float: right;
+    color: white;
+}
+
+
+.btn {
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+
+
+
+}
+
+
+
+.produtos{
+    width: 80%;
+
+    margin: 0 auto;
+    
+
+    
+}
+
+.produtos h1{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.produtos img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+
+.produtos p{
+    text-align: center;
+
+}
+
+.btn{
+    background-color: rgb(155, 4, 4);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px  solid black;
+    width: 90%;
+
+}
+
+
+.btn:hover{
+    background-color: white;
+    border-color: red;
+    color: red;
+}
+
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+
+.imagemprd{
+}
+
+.about{
+    width: 800px;
+}
+
+
+.about h1{
+    text-align: center;
+}
+
+
+.about p{
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.about .btn{
+    width: 100%;
+}
+
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(73, 21, 21);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color:  white;
+    align-items: center;
+    justify-content: center;
+}
