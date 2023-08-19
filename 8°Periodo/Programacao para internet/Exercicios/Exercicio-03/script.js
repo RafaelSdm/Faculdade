@@ -9,6 +9,8 @@ function calcular(){
     var resultadoElement = document.getElementById("resultado");
 
 
+
+
     let valor1 = valor.value
 
     let qtd1 = qtd.value
@@ -18,16 +20,27 @@ function calcular(){
     valor.value = ''
 
 
-    //window.alert(valor1 * qtd1)
+    if(qtd1 < 0){
+        window.alert('Numero negativo')
+    }else{
 
-    //resultadoElement.textContent = resultado;
-    document.getElementById("show").innerHTML += valor1  *   qtd1
+            //window.alert(valor1 * qtd1)
+
+           //resultadoElement.textContent = resultado;
+            document.getElementById("show").innerHTML += valor1  *   qtd1
 
 
-    console.log(valor1 * qtd1)
+            console.log(valor1 * qtd1)
 
+
+        
+
+    }
 
     return false
+
+
+
 
 }
 
