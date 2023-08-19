@@ -1,20 +1,34 @@
 function calcular(){
     //window.alert('Voce esta mandando os dados!')
+    document.getElementById("show").innerHTML  = ''
 
     var valor = document.getElementById('valor')
 
     var qtd = document.getElementById('qtd')
 
-    const valor1 = valor.value
+    var resultadoElement = document.getElementById("resultado");
 
-    const qtd1 = qtd.value
+
+    let valor1 = valor.value
+
+    let qtd1 = qtd.value
+
+    qtd.value = ''
+
+    valor.value = ''
 
 
     //window.alert(valor1 * qtd1)
 
+    //resultadoElement.textContent = resultado;
+    document.getElementById("show").innerHTML += valor1  *   qtd1
 
-    document.getElementById("mostrar").innerHTML += valor1
 
-    console.log(valor1 * qtd)
+    console.log(valor1 * qtd1)
+
+
+    return false
 
 }
+
+//document.getElementById("mostrar").innerHTML += valor1  *   qtd1
