@@ -52,7 +52,7 @@ function teste(){
     
     var sexo = document.querySelector('input[name="sexo"]:checked')
     //alert(estado_civil)
-    if(estado_civil  == null){
+    if(sexo  == null){
         window.alert('Erro no campo sexo')
         //document.getElementById('email').style.border = '2px solid red'
 

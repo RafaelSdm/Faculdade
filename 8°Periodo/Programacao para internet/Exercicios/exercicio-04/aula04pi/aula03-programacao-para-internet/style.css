@@ -51,8 +51,8 @@ input[type="checkbox"] {
 
     width: 20px;
     height: 20px;
+    outline-color: 10px black;
 
-    outline-style:  red;
     
     
 
@@ -62,7 +62,8 @@ input[type="checkbox"] {
 input[type="radio"],
 input[type="checkbox"]:checked {
 
-    
+    outline: 2px orangered;
+
     
 
     
