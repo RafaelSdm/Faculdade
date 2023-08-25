@@ -51,23 +51,15 @@ input[type="checkbox"] {
 
     width: 20px;
     height: 20px;
-    outline-color: 10px black;
-
-    
     
 
     
-}
-
-input[type="radio"],
-input[type="checkbox"]:checked {
-
-    outline: 2px orangered;
-
     
 
     
 }
+
+
 
 button {
     padding: 10px 20px;

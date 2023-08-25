@@ -44,7 +44,9 @@ function teste(){
     //alert(estado_civil)
     if(estado_civil  == null){
         window.alert('Erro no campo estado civil')
-        //document.getElementById('email').style.border = '2px solid red'
+        document.getElementById('solteiro').style.outline = "2px solid #ff0000" 
+        document.getElementById('casado').style.outline = "2px solid #ff0000" 
+        document.getElementById('enrolado').style.outline = "2px solid #ff0000" 
 
         return false
     }
@@ -54,7 +56,8 @@ function teste(){
     //alert(estado_civil)
     if(sexo  == null){
         window.alert('Erro no campo sexo')
-        //document.getElementById('email').style.border = '2px solid red'
+        document.getElementById('masculino').style.outline = "2px solid #ff0000"
+        document.getElementById('feminino').style.outline = "2px solid #ff0000" 
 
         return false
     }
