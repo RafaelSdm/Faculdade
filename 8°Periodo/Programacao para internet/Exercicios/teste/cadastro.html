@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <h1>Cadastro de Produto</h1>
+    <form id="cadastroForm">
+        <label for="productId">ID do Produto:</label>
+        <input type="text" id="productId" required><br><br>
+        
+        <label for="productName">Nome do Produto:</label>
+        <input type="text" id="productName" required><br><br>
+        
+        <label for="productImage">Foto do Produto (JPG ou PNG):</label>
+        <input type="file" id="productImage" accept=".jpg, .png" required><br><br>
+        
+        <label for="productPrice">Valor Unitário do Produto:</label>
+        <input type="number" id="productPrice" required><br><br>
+        
+        <label for="productWeight">Peso do Produto:</label>
+        <input type="number" id="productWeight" required><br><br>
+        
+        <label for="productAvailability">Disponibilidade em Estoque:</label>
+        <input type="checkbox" id="productAvailability"><br><br>
+        
+        <button type="button" id="cadastrarButton">Cadastrar</button>
+    </form>
+
+    <script>
+        document.getElementById('cadastrarButton').addEventListener('click', function() {
+            // Recuperar os valores dos campos
+            const productId = document.getElementById('productId').value;
+            const productName = document.getElementById('productName').value;
+            const productImage = document.getElementById('productImage').files[0];
+            const productPrice = document.getElementById('productPrice').value;
+            const productWeight = document.getElementById('productWeight').value;
+            const productAvailability = document.getElementById('productAvailability').checked;
+
+            // Validar os campos (adicione suas próprias regras de validação aqui)
+
+            // Criar um objeto de produto
+            const product = {
+                id: productId,
+                name: productName,
+                image: productImage.name,
+                price: productPrice,
+                weight: productWeight,
+                availability: productAvailability
+            };
+
+            // Obter a lista de produtos do localStorage
+            let productList = JSON.parse(localStorage.getItem('products')) || [];
+
+            // Adicionar o novo produto à lista
+            productList.push(product);
+
+            // Armazenar a lista atualizada de produtos no localStorage
+            localStorage.setItem('products', JSON.stringify(productList));
+
+            // Limpar o formulário
+            document.getElementById('cadastroForm').reset();
+
+            alert('Produto cadastrado com sucesso!');
+
+            // ...
+
+            // Armazenar a lista atualizada de produtos no localStorage
+            localStorage.setItem('products', JSON.stringify(productList));
+
+            // Limpar o formulário
+            document.getElementById('cadastroForm').reset();
+
+            alert('Produto cadastrado com sucesso!');
+
+            // Redirecionar para a página de exibição após o cadastro
+            window.location.href = 'exibir.html';
+
+        });
+    </script>
+</body>
+</html>

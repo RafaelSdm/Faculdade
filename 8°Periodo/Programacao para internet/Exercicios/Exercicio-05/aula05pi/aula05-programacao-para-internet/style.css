@@ -1,0 +1,52 @@
+/* Estilizando o body para definir o fundo preto */
+body {
+    background-color: black;
+    color: white; /* Definindo a cor do texto como branco */
+    font-family: Arial, sans-serif; /* Escolha a fonte que desejar */
+    margin: 0; /* Removendo margens padrão do body */
+    padding: 0; /* Removendo padding padrão do body */
+}
+
+/* Estilizando o container do formulário */
+div {
+    text-align: center; /* Centralizando o texto */
+    padding: 20px; /* Adicionando um espaço interno ao redor do conteúdo */
+}
+
+/* Estilizando o cabeçalho */
+h1 {
+    color: yellow; /* Definindo a cor do cabeçalho como amarelo */
+}
+
+/* Estilizando as labels dos campos */
+label {
+    display: block; /* Faz com que cada label ocupe uma linha inteira */
+    color: yellow; /* Definindo a cor do texto das labels como amarelo */
+    margin-bottom: 5px; /* Adicionando um espaço abaixo de cada label */
+}
+
+/* Estilizando os campos de entrada de texto */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 50%; /* Ocupando 100% da largura disponível */
+    padding: 10px; /* Adicionando um espaço interno ao redor do campo */
+    margin-bottom: 10px; /* Adicionando um espaço abaixo de cada campo */
+    background-color: #333; /* Definindo a cor de fundo dos campos */
+    border: none; /* Removendo a borda padrão */
+    color: white; /* Definindo a cor do texto como branco */
+}
+
+/* Estilizando o botão */
+button {
+    background-color: yellow; /* Definindo a cor de fundo do botão como amarelo */
+    color: black; /* Definindo a cor do texto do botão como preto */
+    padding: 10px 20px; /* Adicionando espaço interno ao redor do botão */
+    border: none; /* Removendo a borda padrão */
+    cursor: pointer; /* Alterando o cursor ao passar sobre o botão */
+}
+
+/* Estilizando o botão quando hover (passar o mouse por cima) */
+button:hover {
+    background-color: #ffcc00; /* Mudando a cor de fundo para um tom mais claro de amarelo */
+}

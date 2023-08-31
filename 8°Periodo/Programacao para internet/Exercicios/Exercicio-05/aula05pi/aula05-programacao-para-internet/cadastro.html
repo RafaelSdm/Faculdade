@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">'
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h1>Formulario de cadastro de produto</h1>
+    </div>
+
+
+    <form action="" id="cadastroForm">
+
+        <div>
+
+            <label for="identificador">Id do produto:</label>
+            <input type="text" name="identificador" id="identificador">
+
+        </div>
+
+
+        <div>
+            <label for="nomeProduto">Nome do produto:</label>
+            <input type="text" name="nomeProduto" id="nomeProduto">
+        </div>
+
+        <div>
+            <label for="productImage">Foto do Produto (JPG ou PNG):</label>
+            <input type="file" id="productImage" accept=".jpg, .png" required><br><br>
+        </div>
+
+
+        <div>
+            <label for="valorProduto">Valor unitário:</label>
+            <input type="number" name="valorProduto" id="valorProduto">
+        </div>
+
+
+
+        <div>
+            <label for="pesoProduto">Peso do produto</label>
+            <input type="number" name="pesoProduto" id="pesoProduto">
+        </div>
+
+
+        <div>
+
+            <label for="estoque">Disponibilidade em estoque</label>
+            <input type="number" name="estoque" id="estoque">
+
+        </div>
+
+
+        <div>
+            <button type="button" id="cadastrarButton">Cadastrar</button>
+        </div>
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

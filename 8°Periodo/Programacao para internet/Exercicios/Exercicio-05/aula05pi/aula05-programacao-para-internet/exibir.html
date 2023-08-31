@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <style>
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .product-image {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Produtos Cadastrados</h1>
+    <div id="productList"></div>
+
+    <script>
+        window.addEventListener('load', function() {
+            // Buscar a lista de produtos do localStorage
+            const productList = JSON.parse(localStorage.getItem('products')) || [];
+
+            console.log(productList)
+
+            // Exibir os produtos na página
+            const productListDiv = document.getElementById('productList');
+// ...
+
+            productList.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+
+                // Exibir a imagem, o nome e o valor do produto
+                const productImage = document.createElement('img');
+                productImage.classList.add('product-image');
+                productImage.src = product.image;
+
+                const productName = document.createElement('p');
+                productName.textContent = `Nome: ${product.name}`;
+
+                // Converter o preço para número antes de chamar toFixed()
+                const productPrice = document.createElement('p');
+                productPrice.textContent = `Valor Unitário: R$ ${parseFloat(product.price).toFixed(2)}`;
+
+                productCard.appendChild(productImage);
+                productCard.appendChild(productName);
+                productCard.appendChild(productPrice);
+
+                productListDiv.appendChild(productCard);
+            });
+
+// ...
+
+        });
+    </script>
+</body>
+</html>
