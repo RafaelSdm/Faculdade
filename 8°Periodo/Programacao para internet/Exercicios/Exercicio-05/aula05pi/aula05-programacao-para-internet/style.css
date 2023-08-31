@@ -1,15 +1,14 @@
 body {
     background-color: black;
-    color: white; /* Definindo a cor do texto como branco */
-    font-family: Arial, sans-serif; /* Escolha a fonte que desejar */
-    margin: 0; /* Removendo margens padrão do body */
-    padding: 0; /* Removendo padding padrão do body */
+    color: white; 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0; 
 }
 
-/* Estilizando o container do formulário */
 div {
-    text-align: center; /* Centralizando o texto */
-    padding: 20px; /* Adicionando um espaço interno ao redor do conteúdo */
+    text-align: center; 
+    padding: 20px; 
 }
 
 h1 {
@@ -17,20 +16,19 @@ h1 {
 }
 
 label {
-    display: block; /* Faz com que cada label ocupe uma linha inteira */
-    color: yellow; /* Definindo a cor do texto das labels como amarelo */
-    margin-bottom: 5px; /* Adicionando um espaço abaixo de cada label */
+    display: block; 
+    color: yellow; 
+    margin-bottom: 5px; 
 }
 
-/* Estilizando os campos de entrada de texto */
 input[type="text"],
 input[type="number"],
 input[type="file"] {
-    width: 40%; /* Ocupando 100% da largura disponível */
-    padding: 10px; /* Adicionando um espaço interno ao redor do campo */
-    margin-bottom: 10px; /* Adicionando um espaço abaixo de cada campo */
-    background-color: #333; /* Definindo a cor de fundo dos campos */
-    border: none; /* Removendo a borda padrão */
+    width: 40%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    background-color: #333; 
+    border: none; 
     color: white; 
 }
 

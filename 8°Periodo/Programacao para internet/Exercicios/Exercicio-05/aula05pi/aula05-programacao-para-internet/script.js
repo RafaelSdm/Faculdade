@@ -3,21 +3,21 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
 
     alert('Produto cadastrado com sucesso!');
 
-    const productId = document.getElementById('identificador').value;
-    const productName = document.getElementById('nomeProduto').value;
-    const productImage = document.getElementById('productImage').files[0];
-    const productPrice = document.getElementById('valorProduto').value;
-    const productWeight = document.getElementById('pesoProduto').value;
-    const productAvailability = document.getElementById('estoque').value;
+    const id = document.getElementById('identificador').value;
+    const nome = document.getElementById('nomeProduto').value;
+    const imagem = document.getElementById('productImage').files[0];
+    const preco = document.getElementById('valorProduto').value;
+    const peso = document.getElementById('pesoProduto').value;
+    const estoque = document.getElementById('estoque').value;
 
 
     const product = {
-        id: productId,
-        name: productName,
-        image: productImage.name,
-        price: productPrice,
-        weight: productWeight,
-        availability: productAvailability
+        id: id,
+        name: nome,
+        imagem: imagem.name,
+        preco: preco,
+        peso: peso,
+        estoque: estoque
     };
 
     console.log(product)
