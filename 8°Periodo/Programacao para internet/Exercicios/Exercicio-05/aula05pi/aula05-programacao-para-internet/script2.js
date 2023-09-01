@@ -1,32 +1,66 @@
-window.addEventListener('load', function() {
-    const productList = JSON.parse(localStorage.getItem('products')) || [];
+
+function atualizar(){
+
+    const ListaProdutos = JSON.parse(localStorage.getItem('products')) || [];
 
     console.log(productList)
 
-    const productListDiv = document.getElementById('productList');
+    const container = document.getElementById('productList');
 
 
-    productList.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
+    ListaProdutos.forEach((product, index) => {
+        const divProduto = document.createElement('div');
+        divProduto.classList.add('product-card');
 
-        const productImage = document.createElement('img');
-        productImage.classList.add('product-image');
-        productImage.src = product.image;
+        const imagemProduto = document.createElement('img');
+        imagemProduto.classList.add('product-image');
+        imagemProduto.src = product.imagem;
 
-        const productName = document.createElement('p');
-        productName.innerHTML = `Nome: ${product.name}`;
+        const nomeProduto = document.createElement('p');
+        nomeProduto.innerHTML = `Nome: ${product.name}`;
 
-        const productPrice = document.createElement('p');
-        productPrice.innerHTML = `Valor Unitário: R$ ${parseFloat(product.price).toFixed(2)}`;
+        const precoProduto = document.createElement('p');
+        precoProduto.innerHTML = `Valor Unitário: R$ ${parseFloat(product.preco).toFixed(2)}`;
 
-        productCard.appendChild(productImage);
-        productCard.appendChild(productName);
-        productCard.appendChild(productPrice);
+        /*
+        const btn = this.document.createElement('button')
+        btn.addEventListener('click', excluir)
+        btn.innerHTML = 'Excluir'
 
-        productListDiv.appendChild(productCard);
-    });
+        */
+
+        const btn = this.document.createElement ('div')
+        btn.innerHTML = `<button type="button" onclick="excluir(${index})">Excluir</button>`
+
+        divProduto.appendChild(imagemProduto);
+        divProduto.appendChild(nomeProduto);
+        divProduto.appendChild(precoProduto);
+        container.appendChild(divProduto);
+        divProduto.appendChild(btn)
+    
+}
+
+)}
 
 
 
-});
+
+window.addEventListener('load', atualizar);
+
+
+function excluir(index){
+    window.alert(index)
+
+
+    const ListaProdutos = JSON.parse(localStorage.getItem('products')) || [];
+
+    ListaProdutos.splice(index, 1)
+    localStorage.setItem('products', JSON.stringify(ListaProdutos));
+
+    alert('de um f5 para carregar!')
+
+    window.addEventListener('load', atualizar);
+    window.location.href = 'exibir.html' ;
+
+
+}

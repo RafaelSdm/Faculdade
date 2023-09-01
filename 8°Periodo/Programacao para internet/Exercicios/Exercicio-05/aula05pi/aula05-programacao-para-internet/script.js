@@ -1,32 +1,32 @@
 document.getElementById('cadastrarButton').addEventListener('click', function() {
 
 
-    alert('Produto cadastrado com sucesso!');
+    //alert('Produto cadastrado com sucesso!');
 
     const id = document.getElementById('identificador').value;
     const nome = document.getElementById('nomeProduto').value;
-    const imagem = document.getElementById('productImage').files[0];
+    const img = document.getElementById('productImage').files[0];
     const preco = document.getElementById('valorProduto').value;
     const peso = document.getElementById('pesoProduto').value;
     const estoque = document.getElementById('estoque').value;
 
 
-    const product = {
+    const produto = {
         id: id,
-        name: nome,
-        imagem: imagem.name,
+        name: nome, 
+        imagem: img.name,
         preco: preco,
         peso: peso,
         estoque: estoque
     };
 
-    console.log(product)
+    console.log(produto)
 
-    let productList = JSON.parse(localStorage.getItem('products')) || [];
+    let listaProdutos = JSON.parse(localStorage.getItem('products')) || [];
 
-    productList.push(product);
+    productList.push(produto);
 
-    localStorage.setItem('products', JSON.stringify(productList));
+    localStorage.setItem('products', JSON.stringify(listaProdutos));
 
     document.getElementById('cadastroForm').reset();
 
@@ -34,12 +34,12 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
 
     
 
-    localStorage.setItem('products', JSON.stringify(productList));
+    localStorage.setItem('products', JSON.stringify(listaProdutos));
 
     document.getElementById('cadastroForm').reset();
 
     alert('Produto cadastrado com sucesso!');
 
-    window.location.href = 'exibir.html';
+    window.location.href = 'exibir.html' ;
 
 });
