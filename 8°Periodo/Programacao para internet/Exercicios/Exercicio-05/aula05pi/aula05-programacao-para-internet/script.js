@@ -1,3 +1,5 @@
+var produtosId = []
+
 document.getElementById('cadastrarButton').addEventListener('click', function() {
 
 
@@ -11,6 +13,16 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     const estoque = document.getElementById('estoque').value;
 
 
+    if(id == '' || nome == '' || preco == '' || peso == '' || estoque == '' || img == ''){
+        window.alert('nem todos os campos estao preenchidos')
+
+    }
+
+    else{
+
+    console.log(img)
+
+    let existeId = 0    
     const produto = {
         id: id,
         name: nome, 
@@ -20,26 +32,84 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
         estoque: estoque
     };
 
-    console.log(produto)
+    console.log(produto.name)
 
-    let listaProdutos = JSON.parse(localStorage.getItem('products')) || [];
+    // Verifica se ja existe um id na lista
 
-    productList.push(produto);
 
-    localStorage.setItem('products', JSON.stringify(listaProdutos));
 
-    document.getElementById('cadastroForm').reset();
+    produtosId.push(produto.id)
 
-    alert('Produto cadastrado com sucesso!');
+
+    console.log('Lista de todos os nomes dos produtos')
+    produtosId.forEach((prod) =>{
+        console.log('---------------------')
+        console.log(prod)
+        console.log('------------------')
+    })
+
+    console.log('---====================----')
+    console.log(produtosId)
+    console.log('=--============================')
+
 
     
 
-    localStorage.setItem('products', JSON.stringify(listaProdutos));
 
-    document.getElementById('cadastroForm').reset();
 
-    alert('Produto cadastrado com sucesso!');
+    let listaProdutos = JSON.parse(localStorage.getItem('products')) || [];
 
-    window.location.href = 'exibir.html' ;
+    console.log('-------------------lista')
+
+    console.log('Verificando se existe produto com esse id')
+    listaProdutos.forEach((prod) =>{
+        console.log('---------------------')
+        console.log(prod.id)
+        console.log('------------------')
+        if(prod.id == id){
+            window.alert('Ja existe um produto com este ID');
+            existeId = 1
+            
+        }else{
+            //window.alert('Nao existe produto com esse id')
+        }
+    })
+
+
+   
+    if(existeId == 1){
+        window.alert('Informe um id valido para este produto')
+
+
+    }else{
+
+        console.log(listaProdutos)
+
+        listaProdutos.push(produto);
+    
+        localStorage.setItem('products', JSON.stringify(listaProdutos));
+    
+        //document.getElementById('cadastroForm').reset();
+    
+        alert('Produto cadastrado com sucesso!');
+    
+      
+    
+        localStorage.setItem('products', JSON.stringify(listaProdutos));
+    
+        document.getElementById('cadastroForm').reset();
+    
+        alert('Produto cadastrado com sucesso!');
+    
+        window.location.href = 'exibir.html' ;
+    }
+
+
+
+
+
+    }
+
+
 
 });
