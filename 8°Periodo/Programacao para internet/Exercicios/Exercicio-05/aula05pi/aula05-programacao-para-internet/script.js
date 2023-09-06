@@ -12,6 +12,13 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     const peso = document.getElementById('pesoProduto').value;
     const estoque = document.getElementById('estoque').value;
 
+    var peso1 = parseInt(peso)
+    var preco1 = parseFloat(preco)
+
+    console.log(peso1)
+    console.log(peso1)
+    //window.alert(typeof(peso1))
+
 
     if(id == '' || nome == '' || preco == '' || peso == '' || estoque == '' || img == ''){
         window.alert('nem todos os campos estao preenchidos')
@@ -36,8 +43,13 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
 
     // Verifica se ja existe um id na lista
 
+    if(peso1 <=0 || preco1 <= 0){
+        window.alert('Peso ou preco cadastrados com numeros negativos')
+    }
 
+    else{
 
+    //window.alert(typeof(peso));  
     produtosId.push(produto.id)
 
 
@@ -91,7 +103,7 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     
         //document.getElementById('cadastroForm').reset();
     
-        alert('Produto cadastrado com sucesso!');
+        //alert('Produto cadastrado com sucesso!');
     
       
     
@@ -109,6 +121,11 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
 
 
     }
+
+    }
+
+
+
 
 
 

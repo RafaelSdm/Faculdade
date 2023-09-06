@@ -57,7 +57,7 @@ function excluir(index){
     ListaProdutos.splice(index, 1)
     localStorage.setItem('products', JSON.stringify(ListaProdutos));
 
-    alert('de um f5 para carregar!')
+    //alert('recarregar!')
 
     window.addEventListener('load', atualizar);
     window.location.href = 'exibir.html' ;

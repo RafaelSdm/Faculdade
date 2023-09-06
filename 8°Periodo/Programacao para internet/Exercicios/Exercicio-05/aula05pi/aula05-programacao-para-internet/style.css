@@ -45,13 +45,17 @@ button:hover {
     background-color: #ffcc00; 
 }
 .product-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    border: 1px solid gold;
+    padding: 15px;
+    margin: 20px;
     display: inline-block;
 }
 
 .product-image {
     max-width: 100px;
     max-height: 100px;
+}
+
+.exibir{
+    text-align: center;
 }
