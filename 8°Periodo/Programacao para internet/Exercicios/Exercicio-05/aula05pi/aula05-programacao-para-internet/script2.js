@@ -49,7 +49,7 @@ window.addEventListener('load', atualizar);
 
 
 function excluir(index){
-    window.alert(index)
+    //window.alert(index)
 
 
     const ListaProdutos = JSON.parse(localStorage.getItem('products')) || [];

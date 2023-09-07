@@ -20,7 +20,7 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     //window.alert(typeof(peso1))
 
 
-    if(id == '' || nome == '' || preco == '' || peso == '' || estoque == '' || img == ''){
+    if(id == '' || nome == '' || preco == '' || peso == '' || estoque == '' || img == undefined){
         window.alert('nem todos os campos estao preenchidos')
 
     }
@@ -79,7 +79,7 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
         console.log(prod.id)
         console.log('------------------')
         if(prod.id == id){
-            window.alert('Ja existe um produto com este ID');
+            //window.alert('Ja existe um produto com este ID');
             existeId = 1
             
         }else{
@@ -101,7 +101,7 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     
         localStorage.setItem('products', JSON.stringify(listaProdutos));
     
-        //document.getElementById('cadastroForm').reset();
+        document.getElementById('cadastroForm').reset();
     
         //alert('Produto cadastrado com sucesso!');
     
@@ -113,7 +113,7 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
     
         alert('Produto cadastrado com sucesso!');
     
-        window.location.href = 'exibir.html' ;
+        //window.location.href = 'exibir.html' ;
     }
 
 
@@ -130,3 +130,9 @@ document.getElementById('cadastrarButton').addEventListener('click', function() 
 
 
 });
+
+
+function chamarPagina(){
+            window.location.href = 'exibir.html' ;
+
+}
