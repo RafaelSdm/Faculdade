@@ -1,0 +1,82 @@
+.notaAzul{
+    color: blue;
+}
+
+.faltaAzul{
+    color: blue;
+}
+
+.notaVermelha{
+    color: red;
+}
+
+.faltaVermelha{
+    color: red;
+}
+
+
+/* Arquivo style.css */
+
+/* Estilize o corpo (body) da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo geral da página */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilize a classe header */
+.header {
+    background-color: blue; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilize a classe container */
+.container {
+    max-width: 800px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilize os elementos dentro da classe bimestre */
+.bimestre {
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilize os labels */
+.bimestre label {
+    display: block; /* Coloca cada label em uma nova linha */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilize os inputs */
+.bimestre input[type="number"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda com cor */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-top: 5px; /* Espaçamento superior */
+}
+
+/* Estilize o botão */
+.botao input {
+    background-color: blue; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor ao passar sobre o botão */
+}
+
+/* Estilize a classe resultado */
+.resultado {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilize as tags de parágrafo dentro da classe resultado */
+.resultado p {
+    margin: 5px 0; /* Espaçamento vertical */
+}

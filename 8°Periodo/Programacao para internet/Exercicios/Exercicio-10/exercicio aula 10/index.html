@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Notas</title>
+</head>
+<body>
+
+
+    <div class="header">
+
+        <h1>Controle Escolar</h1>
+
+    </div>
+
+    <div class="container">
+
+        <div class="disciplina">
+
+            <h1>Disciplina XPTO</h1>
+
+        </div>
+
+        <div class="bimestre">
+
+            <label for="n1">Bimestre 1:</label>
+            <input type="number" name="n1" id="n1">
+            <label for="f1">Faltas  1° Bimestre:</label>
+            <input type="number" name="f1" id="f1">
+
+        </div>
+
+
+        <div class="bimestre">
+
+            <label for="n2">Bimestre 2:</label>
+            <input type="number" name="n2" id="n2">
+            <label for="f2">Faltas 2° Bimestre:</label>
+            <input type="number" name="f2" id="f2">
+
+        </div>
+
+
+        
+
+        <div class="bimestre">
+
+            <label for="n3">Bimestre 3:</label>
+            <input type="number" name="n3" id="n3">
+            <label for="f3">Faltas 3° Bimestre:</label>
+            <input type="number" name="f3" id="f3">
+
+        </div>
+
+
+        
+
+        <div class="bimestre">
+
+            <label for="n4">Bimestre 4:</label>
+            <input type="number" name="n4" id="n4">
+            <label for="f4">Faltas 4° Bimestre:</label>
+            <input type="number" name="f4" id="f4">
+
+        </div>
+
+
+
+        <div class="botao">
+
+            <input type="button" onclick="calcular()" value="Situação Final">
+
+        </div>
+
+
+        <div class="resultado">
+
+            <p id="nota">Nota Final: <span class="" id="notat"></span> </p>
+            <p id="falta">Faltas (%): <span class="" id="faltat"></span>  </p>
+            <p id="situacao">Situação: <span id="situacaot"></span> </p>
+
+        </div>
+
+
+
+
+    </div>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
