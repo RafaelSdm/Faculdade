@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria</title>
+</head>
+<body>
+    <h1>Secretaria - Cadastro de Disciplinas e Alunos</h1>
+
+    <h2>Cadastrar Disciplina</h2>
+    <label for="disciplina">Nome da Disciplina:</label>
+    <input type="text" id="disciplina">
+    <button onclick="cadastrarDisciplina()">Cadastrar Disciplina</button>
+
+    <h2>Cadastrar Aluno</h2>
+    <label for="aluno">Nome do Aluno:</label>
+    <input type="text" id="aluno">
+    <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
+
+    <script>
+        function cadastrarDisciplina() {
+            const disciplina = document.getElementById("disciplina").value;
+            const disciplinas = JSON.parse(localStorage.getItem("disciplinas")) || [];
+            disciplinas.push(disciplina);
+            localStorage.setItem("disciplinas", JSON.stringify(disciplinas));
+            alert(`Disciplina "${disciplina}" cadastrada com sucesso.`);
+        }
+
+        function cadastrarAluno() {
+            const aluno = document.getElementById("aluno").value;
+            const alunos = JSON.parse(localStorage.getItem("alunos")) || [];
+            alunos.push(aluno);
+            localStorage.setItem("alunos", JSON.stringify(alunos));
+            alert(`Aluno "${aluno}" cadastrado com sucesso.`);
+        }
+    </script>
+</body>
+</html>
