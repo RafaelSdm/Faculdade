@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7fc; /* Azul claro para o fundo */
+}
+
+header {
+    background-color: #0077b6; /* Azul escuro para o cabeçalho */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background-color: #0096d6; /* Azul um pouco mais claro para o menu */
+    padding: 80px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #005b8e; /* Azul mais escuro para o hover do link */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white; /* Fundo branco para o conteúdo */
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #0077b6; /* Azul escuro para os cabeçalhos */
+}
+
+
+
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #005b8e;
+}
+
+footer {
+    background-color: #005b8e;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    
+}
+
+#professor{
+   
+  
+}
+
+
+.area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+
+.area h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.area p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #0077b6;
+}
+
+.area ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.area ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor</title>
+</head>
+<body>
+    <h1>Professor - Cadastro de Notas e Frequências</h1>
+
+    <h2>Selecione uma Disciplina:</h2>
+    <select id="disciplina">
+        <!-- Carregue as disciplinas do localStorage -->
+        <option value="">Selecione uma disciplina</option>
+    </select>
+
+    <h2>Cadastrar Nota e Frequência:</h2>
+
+    <label for="aluno">Aluno:</label>
+    <select id="aluno">
+        <!-- Carregue os alunos do localStorage -->
+        <option value="">Selecione um aluno</option>
+    </select>
+
+    <label for="nota">Nota:</label>
+    <input type="number" id="nota" min="0" max="25">
+
+    <label for="frequencia">Frequência:</label>
+    <input type="number" id="frequencia" min="0" max="100">
+
+    <button onclick="cadastrarNotaFrequencia()">Cadastrar Nota e Frequência</button>
+
+    <script src="scripts/script1-professor.js"></script>
+</body>
+</html>
