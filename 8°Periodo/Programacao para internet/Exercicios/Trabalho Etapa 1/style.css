@@ -2,18 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f7fc; /* Azul claro para o fundo */
+    background-color: #f0f7fc; 
 }
 
 header {
-    background-color: #0077b6; /* Azul escuro para o cabeçalho */
+    background-color: #0077b6; 
     color: white;
     text-align: center;
     padding: 20px 0;
 }
 
 nav {
-    background-color: #0096d6; /* Azul um pouco mais claro para o menu */
+    background-color: #0096d6; 
     padding: 80px;
 }
 
@@ -40,14 +40,14 @@ a {
 }
 
 a:hover {
-    background-color: #005b8e; /* Azul mais escuro para o hover do link */
+    background-color: #005b8e; 
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white; /* Fundo branco para o conteúdo */
+    background-color: white; 
 }
 
 h1 {
@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-    color: #0077b6; /* Azul escuro para os cabeçalhos */
+    color: #0077b6; 
 }
 
 
