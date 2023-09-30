@@ -1,7 +1,9 @@
 var selectedAluno = 0
 var selectedDisciplina = 0
+var validaNota = 0
 
-
+var codDisciplina = 0 
+var codAluno = 0
 
 function carregarDisciplinasAlunos() {
     const disciplinas = JSON.parse(localStorage.getItem("disciplinas")) || [];
@@ -73,6 +75,8 @@ function carregarDisciplinasAlunos() {
                 console.log("ID do aluno selecionado:", selectedAluno.matricula);
                 console.log("Nome do aluno selecionado:", selectedAluno.nome);
                 console.log(selectedAluno)
+                codAluno = selectedAluno.matricula
+
               });
 
               
@@ -81,6 +85,8 @@ function carregarDisciplinasAlunos() {
                 console.log("Codigo da disciplina:", selectedDisciplina.disciplina);
                 console.log("Nome da disciplina:", selectedDisciplina.codDisciplina);
                 console.log(selectedDisciplina)
+                codDisciplina = selectedDisciplina.codDisciplina
+
               });
 
 
@@ -108,7 +114,7 @@ function carregarDisciplinasAlunos() {
     }
 
         function cadastrarNotaFrequencia() {
-            var validaNota = 0
+           
             /*
             const disciplina = document.getElementById("disciplina").value;
             const aluno = document.getElementById("aluno").value;
@@ -162,7 +168,7 @@ function carregarDisciplinasAlunos() {
                     n2 = notas[i].nota2;
                     n3 = notas[i].nota3;
                     n4 = notas[i].nota4;
-
+                    console.log(notas[i].nota1)
                     f1 = notas[i].falta1
                     f2 = notas[i].falta2
                     f3 = notas[i].falta3
@@ -218,9 +224,10 @@ function carregarDisciplinasAlunos() {
 
                 const inputN1 = document.getElementById("n1");
                 const inputF1 = document.getElementById("f1");
-            
+                console.log('validando as notas aqui ------')
                 inputN1.value = n1;
                 inputF1.value = f1;
+                console.log(n1)
 
                 const inputN2 = document.getElementById("n2");
                 const inputF2 = document.getElementById("f2");
@@ -258,7 +265,8 @@ function carregarDisciplinasAlunos() {
 
             window.alert(selectedDisciplina.codDisciplina)
 
-            calcular(selectedDisciplina.codDisciplina, selectedAluno.matricula)
+
+            calcular(selectedDisciplina.codDisciplina, selectedAluno.matricula, validaNota)
         }
 
         window.addEventListener("load", carregarDisciplinasAlunos);
@@ -279,7 +287,8 @@ function carregarDisciplinasAlunos() {
 
 
 
-        function calcular(codDisciplina, codAluno){
+        function calcular(){
+            var valida = 0
             var n1 = $('#n1').val()
             var n2 = $('#n2').val()
             var n3 = $('#n3').val()
@@ -381,9 +390,12 @@ function carregarDisciplinasAlunos() {
 
             const notas = JSON.parse(localStorage.getItem("notas")) || [];
 
+            console.log('------------------')
+            console.log(codAluno)
+            console.log('------------------')
 
             const infoNota ={
-                codDisciplinad:codDisciplina ,
+                codDisciplinad: codDisciplina ,
                 codAluno: codAluno,
                 nota1: n1,
                 nota2: n2,
@@ -395,10 +407,39 @@ function carregarDisciplinasAlunos() {
                 falta4:f4
             }
 
-            notas.push(infoNota);
-            localStorage.setItem("notas", JSON.stringify(notas));
-            alert(`nota cadastrada com sucesso.`);
+            for(i = 0; i < notas.length; i++){
+                console.log(notas[i].codAluno)
 
+                if( (Number(notas[i].codAluno) == Number(infoNota.codAluno)) && (Number(notas[i].codDisciplinad) ==  Number(infoNota.codDisciplinad ) ) ){
+                    valida= 1
+                    notas[i] = infoNota;
+                    console.log('dkcdcdk')
+                    localStorage.setItem("notas", JSON.stringify(notas));
+
+                }else{
+                    //validaNota = 0
+                    console.log('Nao existe nota cadastrada para esse usuário ---')
+                    console.log(notas[i].codDisciplina)
+                    console.log(selectedDisciplina.codDisciplina)
+
+                }
+            }
+
+            if(valida == 0){
+                notas.push(infoNota);
+                localStorage.setItem("notas", JSON.stringify(notas));
+                const inputNota4 = document.getElementById("n4");
+                const inputFaltas4 = document.getElementById("f4");
+            
+                // Define os valores dos inputs como zero
+                inputNota4.value = "0";
+                inputFaltas4.value = "0";
+            }else{
+                alert(`nota cadastrada com sucesso.`);
+
+            }
 
 }
+
+
         
