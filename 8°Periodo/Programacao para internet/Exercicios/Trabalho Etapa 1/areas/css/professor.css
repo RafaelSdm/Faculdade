@@ -1,3 +1,20 @@
 .container {
     display: none;
   }
+
+
+  .notaAzul{
+    color: blue;
+}
+
+.faltaAzul{
+    color: blue;
+}
+
+.notaVermelha{
+    color: red;
+}
+
+.faltaVermelha{
+    color: red;
+}

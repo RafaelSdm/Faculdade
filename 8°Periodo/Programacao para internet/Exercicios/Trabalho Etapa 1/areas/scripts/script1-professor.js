@@ -10,6 +10,18 @@ function carregarDisciplinasAlunos() {
     const disciplinaSelect = document.getElementById("disciplina");
     const alunoSelect = document.getElementById("aluno");
 
+
+    var n1 = 0
+    var n2 = 0
+    var n3 = 0
+    var n4 = 0
+
+
+    var f1 = 0
+    var f2 = 0
+    var f3 = 0
+    var f4 = 0
+
     console.log('Resutado das disciplinas')
     console.log(disciplinas)
 
@@ -96,6 +108,7 @@ function carregarDisciplinasAlunos() {
     }
 
         function cadastrarNotaFrequencia() {
+            var validaNota = 0
             /*
             const disciplina = document.getElementById("disciplina").value;
             const aluno = document.getElementById("aluno").value;
@@ -112,15 +125,280 @@ function carregarDisciplinasAlunos() {
             */
 
             const container = document.querySelector('.container');
-            
+
             if (container.style.display === 'none' || container.style.display === '') {
               container.style.display = 'block'; // Mostra a div quando oculta
             } else {
-              container.style.display = 'none'; // Oculta a div quando visível
+              //container.style.display = 'none'; // Oculta a div quando visível
+            }
+
+            const infoNota ={
+                codDisciplinad:0 ,
+                codAluno: 0,
+                nota1: 0,
+                nota2: 0,
+                nota3: 0,
+                nota4: 0,
+                falta1:0,
+                falta2:0,
+                falta3:0,
+                falta4:0
+            }
+
+            
+
+            const notas = JSON.parse(localStorage.getItem("notas")) || [];
+            console.log(notas)
+
+
+            for(i = 0; i < notas.length; i++){
+                console.log(notas[i].codAluno)
+                //                if(Number(notas[i].codAluno) == Number(selectedAluno.matricula) && Number(notas[i].codDisciplina) ==  Number(selectedDisciplina.codDisciplina ) ){
+
+                if( (Number(notas[i].codAluno) == Number(selectedAluno.matricula)) && (Number(notas[i].codDisciplinad) ==  Number(selectedDisciplina.codDisciplina ) ) ){
+                    validaNota = 1
+                    console.log('Existe um aluno com esse matricula')
+                    n1 = notas[i].nota1;
+                    n2 = notas[i].nota2;
+                    n3 = notas[i].nota3;
+                    n4 = notas[i].nota4;
+
+                    f1 = notas[i].falta1
+                    f2 = notas[i].falta2
+                    f3 = notas[i].falta3
+                    f4 = notas[i].falta4
+
+
+
+
+
+
+                }else{
+                    //validaNota = 0
+                    console.log('Nao existe nota cadastrada para esse usuário')
+                    console.log(notas[i].codDisciplina)
+                    console.log(selectedDisciplina.codDisciplina)
+
+                }
             }
 
 
+            //const inputNota1 = document.getElementById("n3");
+            //const inputFaltas = document.getElementById("f3");
+
+            //inputNota1.innerHTML = 0
+
+            if(validaNota == 0){
+                    
+                const inputN1 = document.getElementById("n1");
+                const inputF1 = document.getElementById("f1");
+            
+                inputN1.value = "0";
+                inputF1.value = "0";
+
+                const inputN2 = document.getElementById("n2");
+                const inputF2 = document.getElementById("f2");
+            
+                inputN2.value = "0";
+                inputF2.value = "0";
+
+                const inputN3 = document.getElementById("n3");
+                const inputF3 = document.getElementById("f3");
+            
+                inputN3.value = "0";
+                inputF3.value = "0";
+
+                const inputN4 = document.getElementById("n4");
+                const inputF4 = document.getElementById("f4");
+            
+                inputN4.value = "0";
+                inputF4.value = "0";
+
+            }else{
+
+                const inputN1 = document.getElementById("n1");
+                const inputF1 = document.getElementById("f1");
+            
+                inputN1.value = n1;
+                inputF1.value = f1;
+
+                const inputN2 = document.getElementById("n2");
+                const inputF2 = document.getElementById("f2");
+            
+                inputN2.value = n2;
+                inputF2.value = f2;
+
+                const inputN3 = document.getElementById("n3");
+                const inputF3 = document.getElementById("f3");
+            
+                inputN3.value = n3;
+                inputF3.value = f3;
+
+                const inputN4 = document.getElementById("n4");
+                const inputF4 = document.getElementById("f4");
+            
+                inputN4.value = n4;
+                inputF4.value = f4;
+
+
+
+            }
+
+
+
+            //notas.push(infoNota);
+            //localStorage.setItem("notas", JSON.stringify(notas));
+            //alert(`nota cadastrada com sucesso.`);
+
+            
+
+            
+
+
+
             window.alert(selectedDisciplina.codDisciplina)
+
+            calcular(selectedDisciplina.codDisciplina, selectedAluno.matricula)
         }
 
         window.addEventListener("load", carregarDisciplinasAlunos);
+
+/*
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtém os elementos de entrada com os IDs n3 e f3
+            const inputNota = document.getElementById("n3");
+            const inputFaltas = document.getElementById("f3");
+        
+            // Define o valor 0 nos campos de entrada usando a propriedade value
+            inputNota.value = "0";
+            inputFaltas.value = "0";
+        });
+
+        */
+
+
+
+        function calcular(codDisciplina, codAluno){
+            var n1 = $('#n1').val()
+            var n2 = $('#n2').val()
+            var n3 = $('#n3').val()
+            var n4 = $('#n4').val()
+        
+        
+            var f1 = $('#f1').val()
+            var f2 = $('#f2').val()
+            var f3 = $('#f3').val()
+            var f4 = $('#f4').val()
+        
+            if(n1 > 100 || n2 > 100 || n3  > 100 || n4 > 100){
+                window.alert('Voce passou numeros maiores que 100 na nota')
+                var notaTotal = 'Informe o valor corretamente'
+                
+                var faltaFinal = 'Informe o valor corretamente'
+            }else if(n1 < 0 || n2 < 0 || n3  < 0 || n4 < 0){
+                window.alert('Voce adicionou nota(s) menores que 0')
+                var notaTotal = 'Informe o valor corretamente'
+                
+                var faltaFinal = 'Informe o valor corretamente'
+        
+            }else if(f1 > 100 || f2 > 100 || f3  > 100 || f4 > 100){    
+                window.alert('Voce adicionou faltas maiores do que 100')
+                var notaTotal = 'Informe o valor corretamente'
+                
+                var faltaFinal = 'Informe o valor corretamente'
+        
+            }else if(f1 < 0 || f2 < 0 || f3  < 0 || f4 < 0){
+                window.alert('Voce adicionou faltas menores do que 0')
+                var notaTotal = 'Informe o valor corretamente'
+                
+                var faltaFinal = 'Informe o valor corretamente'
+        
+            }else{
+                var notaTotal = Number(n1) + Number(n2) + Number(n3) + Number(n4)
+                
+                var faltaFinal = (Number(f1) + Number(f2) + Number(f3) + Number(f4) )/ 4
+        
+            }
+        
+           // var notaTotal = Number(n1) + Number(n2) + Number(n3) + Number(n4)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            console.log(notaTotal)
+        
+            if(notaTotal >=60){
+                $('#notat').addClass('notaAzul')
+                $('#notat').removeClass('notaVermelha');
+        
+            }else{
+                $('#notat').addClass('notaVermelha')
+                $('#notat').removeClass('notaAzul');
+            }
+        
+        
+            
+            if(faltaFinal >=25){
+                $('#faltat').addClass('faltaVermelha')
+                $('#faltat').removeClass('faltaAzul');
+        
+            }else{
+                $('#faltat').addClass('faltaAzul')
+                $('#faltat').removeClass('faltaVermelha');
+            }
+        
+        
+            $('#notat').text(notaTotal)
+            $('#faltat').text(faltaFinal)
+        
+            if(notaTotal < 60 && faltaFinal > 25){
+                $('#situacaot').addClass('faltaVermelha')
+                $('#situacapt').removeClass('faltaAzul');
+                $('#situacaot').text('Reprovado por nota e falta');
+            }else if(notaTotal < 60){
+                $('#situacaot').addClass('faltaVermelha')
+                $('#situacapt').removeClass('faltaAzul');
+                $('#situacaot').text('Reprovado por nota');
+        
+            }else if(faltaFinal > 25){
+                $('#situacaot').addClass('faltaVermelha')
+                $('#situacapt').removeClass('faltaAzul');
+                $('#situacaot').text('Reprovado por falta');
+        
+            }else{
+                $('#situacaot').addClass('faltaAzul')
+                $('#situacapt').removeClass('faltaVermelha');
+                $('#situacaot').text('Aprovado');
+        
+            }
+
+
+            const notas = JSON.parse(localStorage.getItem("notas")) || [];
+
+
+            const infoNota ={
+                codDisciplinad:codDisciplina ,
+                codAluno: codAluno,
+                nota1: n1,
+                nota2: n2,
+                nota3: n3,
+                nota4: n4,
+                falta1:f1,
+                falta2:f2,
+                falta3:f3,
+                falta4:f4
+            }
+
+            notas.push(infoNota);
+            localStorage.setItem("notas", JSON.stringify(notas));
+            alert(`nota cadastrada com sucesso.`);
+
+
+}
+        
