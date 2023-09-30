@@ -18,3 +18,130 @@
 .faltaVermelha{
     color: red;
 }
+
+
+nav {
+    background-color: #0096d6; 
+    padding: 50px;
+    
+    color: white;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+a:hover {
+    background-color: #005b8e; 
+}
+
+/* Reset de estilos padrão */
+body, h1, h2, ul, li, p, label, input, select, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7fc; /* Azul claro para o fundo */
+}
+
+h1 {
+    text-align: center;
+    color: #0077b6; /* Azul escuro para o cabeçalho */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0077b6; /* Azul escuro para os cabeçalhos */
+}
+
+.container1, .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white; /* Fundo branco para o conteúdo */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005b8e;
+}
+
+.disciplina h1 {
+    color: #0077b6; /* Azul escuro para o título da disciplina */
+}
+
+.bimestre {
+    margin-top: 20px;
+}
+
+.botao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resultado p {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #005b8e;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+}

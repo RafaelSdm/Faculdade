@@ -9,29 +9,40 @@
     <title>Professor</title>
 </head>
 <body>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Área da Secretaria</a></li>
+            <li><a href="../index.html">Area Inicial</a></li>
+        </ul>
+    </nav>
     <h1>Professor - Cadastro de Notas e Frequências</h1>
 
-    <h2>Selecione uma Disciplina:</h2>
-    <select id="disciplina">
-        <!-- Carregue as disciplinas do localStorage -->
-        <option value="">Selecione uma disciplina</option>
-    </select>
+    <div class="container1">
+        <h2>Selecione uma Disciplina:</h2>
+        <select id="disciplina">
+            <!-- Carregue as disciplinas do localStorage -->
+            <option value="">Selecione uma disciplina</option>
+        </select>
+    </div>
 
-    <h2>Cadastrar Nota e Frequência:</h2>
 
-    <label for="aluno">Aluno:</label>
-    <select id="aluno">
-        <!-- Carregue os alunos do localStorage -->
-        <option value="">Selecione um aluno</option>
-    </select>
+    <div class="container1">
+        <h2>Cadastrar Nota e Frequência:</h2>
 
-    <label for="nota">Nota:</label>
-    <input type="number" id="nota" min="0" max="25">
+        <label for="aluno">Aluno:</label>
+        <select id="aluno">
+            <!-- Carregue os alunos do localStorage -->
+            <option value="">Selecione um aluno</option>
+        </select>
 
-    <label for="frequencia">Frequência:</label>
-    <input type="number" id="frequencia" min="0" max="100">
+    </div>
 
-    <button onclick="cadastrarNotaFrequencia()">Cadastrar Nota e Frequência</button>
+    <div class="container1">
+        <button onclick="cadastrarNotaFrequencia()">Cadastrar Nota e Frequência</button>
+
+    </div>
+
 
 
 
@@ -107,6 +118,10 @@
 
 
     </div>
+
+    <footer>
+        &copy; 2023 UNIVERSIDADE PRESIDENTE ANTONIO CARLOS - UNIPAC. Todos os direitos reservados.
+    </footer>
 
     <script src="scripts/script1-professor.js"></script>
 </body>
