@@ -4,19 +4,19 @@
 
 
   .notaAzul{
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 
 .faltaAzul{
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 
 .notaVermelha{
-    color: red;
+    color: rgb(12, 12, 12);
 }
 
 .faltaVermelha{
-    color: red;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -75,6 +75,7 @@ h1 {
     text-align: center;
     color: #0077b6; /* Azul escuro para o cabeçalho */
     margin-bottom: 20px;
+    padding-top: 30px;
 }
 
 h2 {
@@ -89,6 +90,8 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
 }
 
 label {
@@ -106,7 +109,7 @@ input[type="number"] {
     border-radius: 5px;
 }
 
-button {
+button, input[type="button"] {
     background-color: #0077b6;
     color: white;
     border: none;

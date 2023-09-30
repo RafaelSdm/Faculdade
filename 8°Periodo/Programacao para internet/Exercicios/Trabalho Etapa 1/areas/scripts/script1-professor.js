@@ -194,6 +194,9 @@ function carregarDisciplinasAlunos() {
 
             //inputNota1.innerHTML = 0
 
+            const alterarNome = document.getElementById('disc')
+            alterarNome.innerHTML = selectedDisciplina.disciplina
+
             if(validaNota == 0){
                     
                 const inputN1 = document.getElementById("n1");

@@ -12,7 +12,7 @@
     
     <nav>
         <ul>
-            <li><a href="#">Área da Secretaria</a></li>
+            <li><a href="#">Área do Professor</a></li>
             <li><a href="../index.html">Area Inicial</a></li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@
     <div class="container1">
         <h2>Cadastrar Nota e Frequência:</h2>
 
-        <label for="aluno">Aluno:</label>
+   
         <select id="aluno">
             <!-- Carregue os alunos do localStorage -->
             <option value="">Selecione um aluno</option>
@@ -39,7 +39,7 @@
     </div>
 
     <div class="container1">
-        <button onclick="cadastrarNotaFrequencia()">Cadastrar Nota e Frequência</button>
+        <button onclick="cadastrarNotaFrequencia()">Verificar</button>
 
     </div>
 
@@ -50,7 +50,7 @@
 
         <div class="disciplina">
 
-            <h1>Disciplina XPTO</h1>
+            <h1>Disciplina <span id="disc"></span> </h1>
 
         </div>
 
