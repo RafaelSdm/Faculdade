@@ -266,7 +266,7 @@ function carregarDisciplinasAlunos() {
 
 
 
-            window.alert(selectedDisciplina.codDisciplina)
+            //window.alert(selectedDisciplina.codDisciplina)
 
 
             calcular(selectedDisciplina.codDisciplina, selectedAluno.matricula, validaNota)
@@ -438,11 +438,10 @@ function carregarDisciplinasAlunos() {
                 inputNota4.value = "0";
                 inputFaltas4.value = "0";
             }else{
-                alert(`nota cadastrada com sucesso.`);
+                //alert(`nota cadastrada com sucesso.`);
 
             }
 
 }
 
 
-        
